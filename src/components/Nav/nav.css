@@ -3,7 +3,21 @@
     display:flex;
     justify-content: space-around;
     padding:1rem;
+    position:relative;
 }
 .navLink{
     color:white;
+    cursor: pointer;
+}
+.expand{
+    position:absolute;
+    top:0;
+    right:0;
+    padding:1.5rem;
+    background-color: red;
+
+}
+.collapse{
+    display:none;
+
 }
