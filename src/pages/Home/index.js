@@ -1,18 +1,27 @@
 import {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {Card} from '../../components';
+import { useStoreContext } from '../../utils/GlobalState';
+import { SET_ORDER,ARTICLES } from '../../utils/actions';
 import './home.css';
 import {results} from '../../tempData';
 
 function Home() {
     const [search,setSearch] = useState('');
-    const [articles,setArticles] = useState([])
-    const [order,setOrder] = useState('asc');
+    const [state,dispatch] = useStoreContext();
+    // const [articles,setArticles] = useState([])
+    // const [order,setOrder] = useState('asc');
     const changeOrder = () => {
-        if (order === 'asc'){
-            setOrder('desc');
+        if (state.order === 'asc'){
+            dispatch({
+                type: SET_ORDER,
+                order:'desc',
+            });
         } else {
-            setOrder('asc');
+            dispatch({
+                type: SET_ORDER,
+                order:'asc',
+            });
         }
     }
     const mergeResults = (left,right) => {
@@ -20,8 +29,8 @@ function Home() {
         let i = 0;
         let j = 0;
         while (i<left.length && j<right.length){
-            if (order==='asc'){
-                if (left[i].pubDate <= right[j].pubDate){
+            if (state.order==='asc'){
+                if (left[i].title <= right[j].title){
                     merged.push(left[i]);
                     i++;
                 } else {
@@ -30,7 +39,7 @@ function Home() {
                 }
                 
             } else {
-                if (left[i].pubDate >= right[j].pubDate){
+                if (left[i].title >= right[j].title){
                     merged.push(left[i]);
                     i++;
                 } else {
@@ -64,9 +73,13 @@ function Home() {
         return mergeResults(left,right)
     }
     useEffect(()=>{
-        setArticles(sortResults(results));
-    },[order])
-    
+        const sortedArticles = sortResults(state.articles);
+        dispatch({
+            type: ARTICLES,
+            articles: sortedArticles,
+        })
+    },[state.order])
+
     return (
         <div className="home">
             <div>
@@ -75,7 +88,7 @@ function Home() {
             </div>
             <button onClick={changeOrder}>change</button>
             <div>
-                {articles.filter(article=>article.title.toLowerCase().includes(search.toLowerCase())).map((article,index)=><Link to={`/article/${index}`} key={index}><Card article={article} /></Link>)}
+                {state.articles.filter(article=>article.title.toLowerCase().includes(search.toLowerCase())).map((article,index)=><Link to={`/article/${index}`} key={index}><Card article={article} /></Link>)}
             </div>
         </div>
     );
