@@ -4,7 +4,7 @@ import { ARTICLES } from '../../utils/actions';
 import { useState } from 'react';
 
 function Nav() {
-    const categories = ['Business','Entertainment','Environment','Food','Health','Politics','Science','Sports','Technology','Top','World']
+    const categories = ['business','entertainment','general','health','science','sports','technology']
     const [open,setOpen] = useState(false);
 
     const close = ({target}) => {
