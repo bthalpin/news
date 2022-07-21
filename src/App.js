@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Nav } from './components';
-import { Home } from './pages';
+import { Home,Article } from './pages';
 import './App.css';
 import {results} from './tempData';
 
@@ -13,6 +13,10 @@ function App() {
             <Route
               path='/'
               element={<Home />}
+              />
+            <Route
+              path='/article/:id'
+              element={<Article />}
               />
           </Routes>
       </Router>
