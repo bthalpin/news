@@ -8,7 +8,10 @@ import './home.css';
 function Home() {
     const [search,setSearch] = useState('');
     const [state,dispatch] = useStoreContext();
-    
+    const [spotLight,setSpotLight] = useState(state.articles[Math.floor(Math.random()*state.articles.length)].title)
+    // setTimeout((
+    //     setSpotLight(Math.floor(Math.random()*state.articles.length))
+    // ),3000)
     const changeOrder = () => {
         if (state.order === 'asc'){
             dispatch({
@@ -96,6 +99,9 @@ function Home() {
             <div>
                 <input type="text" placeholder="search" value={search} onChange={(e)=>setSearch(e.target.value)}></input>
                 <button onClick={()=>setSearch('')}>Clear</button>
+            </div>
+            <div>
+                <Link to={`/article/${state.articles.find(article=>article.title===spotLight).title}`} ><Card article={state.articles.find(article=>article.title===spotLight)} /></Link>
             </div>
             <button onClick={changeOrder}>{state.order}</button>
             <button onClick={changeSortBy}>{state.sortBy==='pubDate'?'Date':'Title'}</button>
