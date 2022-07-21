@@ -8,8 +8,7 @@ import './home.css';
 function Home() {
     const [search,setSearch] = useState('');
     const [state,dispatch] = useStoreContext();
-    // const [articles,setArticles] = useState([])
-    // const [order,setOrder] = useState('asc');
+    
     const changeOrder = () => {
         if (state.order === 'asc'){
             dispatch({

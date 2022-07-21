@@ -13,7 +13,7 @@ function Article() {
             :<></>}
             <h2>{state.articles[id].title}</h2>
             <a href={state.articles[id].link}>{state.articles[id].source_id}</a>
-            {/* Uses description if the content in null */}
+            {/* Uses description if the content is null */}
             <p>{state.articles[id].content?state.articles[id].content:state.articles[id].description}</p>
         </div>
     );

@@ -455,6 +455,242 @@ const results = [
       "health"
     ],
     "language": "english"
-}]    
+},
+{
+  "title": "William 'Poogie' Hart, Delfonics lead singer, dead at 77",
+  "link": "https://www.wfaa.com/article/news/nation-world/william-poogie-hart-delfonics-lead-singer-dead-at-77/507-a7a856aa-5daf-4f61-a256-1a13d4cf8b78",
+  "keywords": [
+    "nation-world",
+    "cct-tracking",
+    "entertainment-news",
+    "news"
+  ],
+  "creator": null,
+  "video_url": null,
+  "description": "The Delfonics were heard on soundtracks for movies by Quentin Tarantino and Spike Lee and were covered by Prince, Aretha Franklin and other artists.",
+  "content": null,
+  "pubDate": "2022-07-21 13:50:10",
+  "image_url": "https://media.tegna-media.com/assets/CCT/images/ae86142b-127b-4ed5-a2f7-540576576852/ae86142b-127b-4ed5-a2f7-540576576852_750x422.jpg",
+  "source_id": "wfaa",
+  "country": [
+    "united states of america"
+  ],
+  "category": [
+    "entertainment"
+  ],
+  "language": "english"
+},
+{
+  "title": "What comics did Alan Grant write? Scottish comic book writer dies at 73",
+  "link": "https://www.hitc.com/en-gb/2022/07/21/alan-grant-comics/?utm_source=rss&utm_medium=rss&utm_campaign=alan-grant-comics",
+  "keywords": [
+    "Trending",
+    "Alan Grant"
+  ],
+  "creator": [
+    "Ellissa Bain"
+  ],
+  "video_url": null,
+  "description": "Scottish comic book writer Alan Grant has sadly passed away this week. His wife sue announced the 73-year-old’s death on Facebook on Thursday morning (July... The post What comics did Alan Grant write? Scottish comic book writer dies at 73 appeared first on HITC.",
+  "content": "Scottish comic book writer Alan Grant has sadly passed away this week. His wife sue announced the 73-year-old’s death on Facebook on Thursday morning (July 21st), writing: “I have no words. Alan died this morning.” At the time of writing this, the writer’s cause of death is unknown, but many fans are paying tribute to him on Twitter. Who was Alan? And what comics did he write? Read on to find out… READ MORE: Robin Williams’ secret sadness only came to light after his tragic death The Lord of the Rings: The Rings of Power | Main Teaser | Amazon Prime VideoBridTV10885The Lord of the Rings: The Rings of Power | Main Teaser | Amazon Prime Videohttps://i.ytimg.com/vi/f2Cs-u4b6hI/hqdefault.jpg10531671053167center13872 Who was Alan Grant? Alan Grant was a Scottish comic book writer best known for writing a number of Judge Dredd titles in the weekly British sci-fi comic magazine 2000 AD. He also wrote various Batman titles and was the co-creator of many of its famous characters including Anarky, Victor Zsasz and the Ventriloquist. Born in Bristol, his family moved to Newtongrange in Scotland when he was just one. After leaving school, he briefly worked in a bank before becoming a writer. Alan first started working the comics industry in 1967 when he became an editor for Dundee-based media company D.C. Thomson before moving to London to work for IPC. After becoming a big name in the UK comic industry, he then got his big break in America and wrote strips for DC Comics and Epic Comics. He was married to a woman called Susan Grant and they lived together in Moniaive, Dumfriesshire, but it’s unclear whether they had any children. Alan Grant has passed. A sad loss for comics fans and professionals alike. Pick a favourite book or discover a story for the first time and enjoy his work. pic.twitter.com/4mOhIiVRK0— Gary Erskine (@garyerskine) July 21, 2022 Full list of comics Alan Grant wrote for DC Comics OutcastsDetective ComicsBatman vs Judge Dredd: Judgement on GothamBatmanBatman: Shadow of the BatBatman: The Last Arkham LoboThe DemonL.E.G.I.O.N.Batman/ Judge Dredd: Vendetta in GothamBob, the Galactic BumBatman/ Judge Dredd: The Ultimate RiddleCatwomanTank Girl: ApocalypseBatman/ Phantom StrangerAnarkyBatman/ Judge Dredd: Die Laughing Batman: AnarkyBatman: Dreamland Superman vs. The Terminator: Death to the FutureBatman/ ScarfaceThe Bat no More…?JLA: Riddle of the BeastDC Retroactive: BatmanBatman/ Daredevil: King of New York R.I.P to a true giant of British comics, a giant of ALL comics. The great Alan Grant. Deepest condolences to his family and friends. pic.twitter.com/uT60i1AwcU— Dan Cornwell (@dancornwellart) July 21, 2022 2000 AD Tharg’s Future ShocksBlackhawkJudge DreddTharg the Mighty Strontium DogAce Trucking Co. Robo-HunterHarry Twenty on the High Rock Time TwistersAnderson: Psi Division The Helltrekkers Mean TeamMazeworldBad City BlueTales from Mega-City OneTales from the DoghouseJudge HersheyDurham RedMiddenface McNultyArmageddon: The Bad ManBLAIR OneYoung MiddenfaceJuliet NovemberApolcalypse SoonThe Bogie ManWhatever Happened to? TRENDING: Meet Ivana Trump’s children as she is remembered by family a NYC funeral Alan Grant wrote some of the best Batman stories of all time.He wrote Judge Dredd during the strip's golden age.He wrote Judge Anderson: Shamballa.He wrote Mazeworld.He wrote Tattered Banners.He wrote so much. He wrote freely and oddly and beautifully.RIP pic.twitter.com/IKVBgXAs9i— Tom Shapira (@tomshaps) July 21, 2022 Eagle DoomlordJoe Soap ManixThe House of DaemonGil Hazzard – Codename Scorpio Computer Warrior Other Doctor Who: Invasders From GantacThe Last Ame3rican The Chronicles of Genghis GrimtoadMakabreGarbage ManThe Bogie ManChinatoonThe Manhattan ProjectReturn to CasablancaPsychonauts Jeremiah Harm LEGO Rock Raiders: High Adventure, Deep UndergroundThe Dead: Kingdom of FliesChurch of Hell The post What comics did Alan Grant write? Scottish comic book writer dies at 73 appeared first on HITC.",
+  "pubDate": "2022-07-21 13:48:56",
+  "image_url": null,
+  "source_id": "hitc",
+  "country": [
+    "united kingdom"
+  ],
+  "category": [
+    "top"
+  ],
+  "language": "english"
+},
+{
+  "title": "Pure class. J.J. Watt helps Houston Texans fan with grandfather's funeral",
+  "link": "https://www.wfaa.com/article/sports/nfl/arizona-cardinals-jj-watt-helps-woman-with-grandfathers-funeral/75-3a5920ae-c73f-4778-bb14-020adff6fcc9",
+  "keywords": [
+    "nfl",
+    "football",
+    "sports",
+    "news"
+  ],
+  "creator": null,
+  "video_url": null,
+  "description": "Watt saw a tweet that a Houston Texans fan was selling some of her Watt gear and told her that he would help out instead.",
+  "content": null,
+  "pubDate": "2022-07-21 13:48:49",
+  "image_url": "https://media.tegna-media.com/assets/KPNX/images/c99ba9a1-e33f-41cb-acce-86047e03d5ff/c99ba9a1-e33f-41cb-acce-86047e03d5ff_750x422.jpg",
+  "source_id": "wfaa",
+  "country": [
+    "united states of america"
+  ],
+  "category": [
+    "sports"
+  ],
+  "language": "english"
+},
+{
+  "title": "Containment of Agua Fire in Mariposa County grows to 60%",
+  "link": "https://abc30.com/agua-fire-mariposa-county-highway-140/12063618/",
+  "keywords": null,
+  "creator": [
+    "KFSN"
+  ],
+  "video_url": null,
+  "description": "The Agua Fire burning in Mariposa County is now 60 percent contained.",
+  "content": null,
+  "pubDate": "2022-07-21 13:48:42",
+  "image_url": null,
+  "source_id": "abc30",
+  "country": [
+    "united states of america"
+  ],
+  "category": [
+    "top"
+  ],
+  "language": "english"
+},
+{
+  "title": "Fortnite challenges Chapter 3 Season 3 Week 7: How to stop the music at Rave Cave",
+  "link": "https://www.thesun.co.uk/tech/19274040/fortnite-challenges-stop-music-rave-cave/",
+  "keywords": [
+    "Gaming",
+    "Tech",
+    "Explainers",
+    "Fortnite",
+    "Gaming Explainers",
+    "GLHF",
+    "Video Games"
+  ],
+  "creator": [
+    "Ryan Woodrow"
+  ],
+  "video_url": null,
+  "description": "ANOTHER week, another set of Fortnite challenges fresh for the picking. We’re well into the depths of Fortnite Chapter 3 Season 3 now, and the challenges are getting a little tougher to reflect that. Gone are the peaceful days of planting seeds and dancing on airship crash sites, now things are getting destructive in Fortnite. […]",
+  "content": "ANOTHER week, another set of Fortnite challenges fresh for the picking. We’re well into the depths of Fortnite Chapter 3 Season 3 now, and the challenges are getting a little tougher to reflect that. Epic GamesIt’s all action in this week’s Fortnite challenges.[/caption] Gone are the peaceful days of planting seeds and dancing on airship crash sites, now things are getting destructive in Fortnite. Each of these challenges will earn you 15k XP, so it’s worth getting out there and causing the chaos yourself. We’ll run you through each one and explain how to easily complete them. More in Fortnite PUMPED UP Fortnite's new Prime Shotgun is heating things up SHADOW STYLE Fortnite's Shadow Strike pack is back and cooler than ever Crack three opponents’ shields This is a challenge you’re likely to complete in the heat of a match anyway. Finding shield potions and drinking them gives you extra health in battle, but it shatters once the shield hits zero. If you’re getting involved in fights and taking people out, then you’re bound to crack way more than three shields in no time. Most read in Gaming BLAST OFF Former Sony VP joins former Rockstar team with new reveals FOOTBALL FIRSTS Find out the FIFA release date and new footage FINAL WHISTLE FIFA 23 hands-on preview: Kicking off the end of an era CRITICAL ROLE The unlikely way these friends make £4 million a year PURRFECT COMPANY These kitties are so cute watching their owners game GAME ON How to try PS Plus for free TODAY with rare Sony offer – don't miss out Deal damage to an airborne opponent This takes a steady hand, but shouldn’t be too tricky to pull off. It’s a common tactic in a Fortnite firefight to jump like mad in order to make yourself harder to hit. To complete this challenge you only have to land one shot on an airborne opponent, so just take your time when aiming and you’ll hit your target. Destroy 20 structures with a Baller A Baller is a vehicle you can find at the Rave Cave. You had to zip around with them in last week’s Fortnite challenges, but now you’ve got to cause destruction. Simply get inside one, build up a bit of momentum and go charging through any structures you see. Keep the first weapon you collect until you reach the top 20 players Switching weapons to always have the best gear is an important tactic to keep you on top. However, this challenge asks you not to do that, holding onto the first weapon you find. Note, you don’t have to use it the whole game, you just need to keep it in your inventory, so you won’t be stuck with a bad gun all game. Perform an aerial 360 spin while dismounting a Wolf or Boar You can mount a Wolf or Boar by jumping on its back as they charge at you. You can then ride them around to your heart’s content. When you get off, you’ll be flung up into the air a short distance, so just hold your analog stick, or flick your mouse to rotate a full 360 degrees while you’re in the air. Stop the music at Rave Cave As the name implies, Rave Cave is one big party, but this week it’s your duty to be a party pooper by stopping the music. A normal person would do this by turning the power off, but that’s not the Fortnite way. Instead, you’ll need to shoot at the DJ’s table and all of the speakers around it, including those on the scaffolding. Whether you use guns, explosives, or even a tank to do this is up to you. Just don’t expect any thanks from the partygoers. Throw different consumable pickups in a single match Read More on The Sun KID YOU NOT Man splits opinion after refusing to swap plane seats with 8-year-old girl TEACHER'S PET Primary school teachers reveal the end of term gifts they hate You can get pickups like fruit and vegetables all over the map. Some of the shops in Tilted Towers are stuffed with the green cardboard boxes you need to loot. Once you have a few different types of items in your inventory, start throwing them to your heart’s content until this challenge is completed. Written by Ryan Woodrow on behalf of GLHF. All the latest Gaming tips and tricks Looking for tips and tricks across your favourite consoles and games? We have you covered... All the video game releases in 2022 Can you play PS4 games on PS5? All of the Call of Duty games in order Every Assassin’s Creed game in order All the GTA 5 mods and cheats What are the Pokemon Go Eevee Evolutions? Everything you need to know about Roblox Who created Fortnite? Most popular Roblox games How to get free Robux How many people play Fortnite? Get all of the latest PS5, Xbox and other video game news here  ",
+  "pubDate": "2022-07-21 13:48:38",
+  "image_url": null,
+  "source_id": "thesun",
+  "country": [
+    "united kingdom"
+  ],
+  "category": [
+    "technology"
+  ],
+  "language": "english"
+},
+{
+  "title": "Arsenal striker Gabriel Jesus says Everton defender Yerry Mina ‘talks s***’ and questions ex-Palmeiras teammate as Mikel Arteta hints at Eddie Nketiah partnership",
+  "link": "https://talksport.com/football/1154318/arsenal-striker-gabriel-jesus-says-everton-defender-yerry-mina-talks-s-and-questions-ex-palmeiras-teammate-as-mikel-arteta-hints-at-eddie-nketiah-partnership/",
+  "keywords": [
+    "Football",
+    "Premier League",
+    "Eddie Nketiah",
+    "Yerry Mina"
+  ],
+  "creator": [
+    "Sean O'Brien"
+  ],
+  "video_url": null,
+  "description": "Arsenal striker Gabriel Jesus has opened up on his confrontation with Everton defender Yerry Mina in pre-season. Despite the friendly nature of the Gunners’ 2-0 victory over their Premier League rivals on Sunday, the two former Palmeiras teammates were involved in several altercations. And following Arsenal’s 3-1 win over Orlando on Wednesday, Brazil star Jesus […]",
+  "content": "Arsenal striker Gabriel Jesus has opened up on his confrontation with Everton defender Yerry Mina in pre-season. Despite the friendly nature of the Gunners’ 2-0 victory over their Premier League rivals on Sunday, the two former Palmeiras teammates were involved in several altercations. Jesus and Mina clashed in a recent friendlyArsenal TV There is no love lost between the two South AmericansArsenal TV And following Arsenal’s 3-1 win over Orlando on Wednesday, Brazil star Jesus did not hold back when speaking about the Colombia defender. “You know what, I have played with Mina before in Palmeiras,” Jesus said. “We were so close to each other. Then, after, I don’t know why he started to attack me to do something like this on my chest and then talking s***. I don’t know why. “I don’t know the reason for him to do this. At the end, I am not a kid anymore, and I go straight to him as well. After we won the game, and that’s all.” Jesus has impressed in pre-season since joining Arsenal in a £45million deal from Manchester City. The 25-year-old’s arrival followed a new contract for Eddie Nketiah, ending fears the England youth star could leave on a free transfer this summer. Jesus and Nketiah could form an unlikely partnershipGetty Most read in Football deals Zinchenko watches Arsenal, Kounde to Chelsea, Man City won't pay Cucurella price tag DECISIONS West Ham told ‘Lingard doesn’t owe you anything’ as Rice responds to Twitter post humbled Alli misses open goal from three yards as Everton embarrassed 4-0 by MLS side unhappy Grealish shoves Club America players as Man City star targeted with brutal tackles depth The two line-ups Spurs can field this season as Conte builds incredible squad set Lingard in, former Liverpool and Bayern men start - Forest team to stun Premier League Nketiah struck moments after Jesus’ half-time introduction in the victory over Orlando and, suddenly, Mikel Arteta has options in attack. There were concerns over the Gunners’ firepower up front following the exits of Pierre-Emerick Aubameyang and Alexandre Lacazette. Nketiah was expected to provide cover for Jesus but after showing a clear chemistry on the pitch in pre-season, Arteta admits he could use them as a front two. The Spaniard said: “We want to build those relationships, and they haven’t played a lot of minutes together yet. The same with Martin and Gabi, for example, and we have to start to do that. “We obviously do it in training, but to put it in practice in matches, it’s important, and you can see that they are finding themselves with good timing, and it’s important because there are two players with a big goal threat.” Offers Of The Day Bet365 – Bet £10 Get £50 in Free Bets* – CLAIM HERE Open account offer. Bet £10 & Get £50 in Free Bets for new customers at bet365. Min deposit requirement. Free Bets are paid as Bet Credits and are available for use upon settlement of qualifying bets. Min odds, bet and payment method exclusions apply. Returns exclude Bet Credits stake. Time limits and T&Cs apply 18+ Begambleaware.org SEE MORE FREE BET OFFERS HERE",
+  "pubDate": "2022-07-21 13:47:02",
+  "image_url": null,
+  "source_id": "talksport",
+  "country": [
+    "united kingdom"
+  ],
+  "category": [
+    "sports"
+  ],
+  "language": "english"
+},
+{
+  "title": "J.J. Watt Offers to Help Fan Pay for Funeral",
+  "link": "https://www.si.com/nfl/2022/07/21/jj-watt-offers-help-fan-pay-funeral-keep-shoes-jersey",
+  "keywords": [
+    "Breaking",
+    "NFL",
+    "Wire"
+  ],
+  "creator": [
+    "Michael Shapiro"
+  ],
+  "video_url": null,
+  "description": "The future Hall of Famer made quite the gesture on Wednesday.",
+  "content": "The future Hall of Famer made quite the gesture on Wednesday. View the original article to see embedded media. Cardinals defensive end J.J. Watt issued quite the gesture Wednesday night as he offered to cover expenses for the funeral of a Texans fan’s grandfather. Watt, who played in Houston from 2011 to ’20, was tagged in a tweet Wednesday as a fan offered to sell a pair of Watt’s Reebok shoes in an attempt to pay for her grandfather’s funeral. But it looks as though she won’t be selling the Watt shoes, after all. This is far from Watt’s first foray into charitable endeavors. He helped raise over $37 million for Houston residents after Hurricane Harvey in 2019, and he currently serves as the president of the Justin J. Watt Foundation, a charity that provides kids with after-school opportunities.Watt is a five-time All-Pro and three-time Defensive Player of the Year. He sports 102 sacks in 135 games, though he logged just one sack in 2021, his first year with Arizona.  Watch the NFL online with fuboTV: Try for free!More NFL Coverage:Fantasy Football PPR Rankings & Stat ProjectionsRunning Back ADP ReportReport: Buccaneers Signing Veteran Tight End Kyle RudolphAll Cardinals: Arizona Cardinals Joint Practices Against Tennessee Titans For more Arizona Cardinals coverage, go to All Cardinals. ",
+  "pubDate": "2022-07-21 13:46:05",
+  "image_url": "http://www.si.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Ch_1200%2Cq_auto:good%2Cw_1200/MTg2Nzg3NzIzMTcwODE3NzM1/jj-watt.jpg",
+  "source_id": "si",
+  "country": [
+    "united states of america"
+  ],
+  "category": [
+    "sports"
+  ],
+  "language": "english"
+},
+{
+  "title": "Christine Baranski weighs in on viral Met Gala glare at Elon Musk",
+  "link": "https://www.thenews.com.pk/latest/975547-christine-baranski-weighs-in-on-viral-met-gala-glare-at-elon-musk",
+  "keywords": null,
+  "creator": null,
+  "video_url": null,
+  "description": "Christine Baranski speaks on viral Met Gala serious stare at Elon Musk",
+  "content": null,
+  "pubDate": "2022-07-21 13:46:04",
+  "image_url": null,
+  "source_id": "thenews",
+  "country": [
+    "pakistan"
+  ],
+  "category": [
+    "entertainment"
+  ],
+  "language": "english"
+},
+{
+  "title": "Dave Chappelle’s show in Minneapolis canceled by venue after backlash",
+  "link": "https://www.washingtonpost.com/arts-entertainment/2022/07/21/dave-chappelle-minneapolis-first-avenue-canceled/",
+  "keywords": null,
+  "creator": [
+    "Timothy Bella"
+  ],
+  "video_url": null,
+  "description": "First Avenue had faced blowback for booking the legendary comedian for a surprise, sold-out performance in the months that followed his 2021 Netflix special, “The Closer,” in which Chappelle doubled down on jokes about the LGBTQ community.",
+  "content": null,
+  "pubDate": "2022-07-21 13:44:21",
+  "image_url": null,
+  "source_id": "washingtonpost",
+  "country": [
+    "united states of america"
+  ],
+  "category": [
+    "entertainment"
+  ],
+  "language": "english"
+},
+{
+  "title": "Kendall Jenner granted restraining order against alleged trespasser at LA home",
+  "link": "https://www.thenews.com.pk/latest/975540-kendall-jenner-granted-restraining-order-against-alleged-trespasser-at-la-home",
+  "keywords": null,
+  "creator": null,
+  "video_url": null,
+  "description": "Kendall Jenner filed for a restraining order after facing an alleged security scare in January",
+  "content": null,
+  "pubDate": "2022-07-21 13:44:00",
+  "image_url": null,
+  "source_id": "thenews",
+  "country": [
+    "pakistan"
+  ],
+  "category": [
+    "entertainment"
+  ],
+  "language": "english"
+}
+]    
 
 export {results};
+
+
+	
