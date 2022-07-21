@@ -101,7 +101,7 @@ function Home() {
                 <button onClick={()=>setSearch('')}>Clear</button>
             </div>
             <div>
-                <Link to={`/article/${state.articles.find(article=>article.title===spotLight).title}`} ><Card article={state.articles.find(article=>article.title===spotLight)} /></Link>
+                {/* <Link to={`/article/${state.articles.find(article=>article.title===spotLight).title}`} ><Card article={state.articles.find(article=>article.title===spotLight)} /></Link> */}
             </div>
             <button onClick={changeOrder}>{state.order}</button>
             <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button>

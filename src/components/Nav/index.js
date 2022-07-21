@@ -13,12 +13,16 @@ function Nav() {
     }
     return (
         <div className="nav" onClick={e=>close(e)}>
-            <div className={open?'expand':'collapse'} >
-            {categories.map((category,index)=>{
-                return (
-                    <div className={`navLink`} key={index}>{category}</div>
-                )
-            })}
+            <div className={open?'expanded':''}>
+                <div className={`menu ${open?'collapse':'expand'}`} >OPEN</div>
+                <div className={open?'expand':'collapse'} >
+                {categories.map((category,index)=>{
+                    return (
+                        <div className={`navLink`} key={index}>{category}</div>
+                    )
+                })}
+
+                </div>
 
             </div>
         </div>

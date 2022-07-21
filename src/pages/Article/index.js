@@ -10,13 +10,13 @@ function Article() {
     const article = state.articles.filter(article=> article.publishedAt === time)[0]
     return (
         <div className="article">
-                <img className="articleImg" src={article.urlToImage} alt={article.title}></img>
+                <img className="articleImg" src={article?.urlToImage} alt={article?.title}></img>
        
-            <h2>{article.title}</h2>
-            <p>Author: {article.author}</p>
-            <p>{formatDate(article.publishedAt)}</p>
-            <a href={article.url}>{article.source.name}</a>
-            <p>{article.description}</p>
+            <h2>{article?.title}</h2>
+            <p>Author: {article?.author}</p>
+            <p>{formatDate(article?.publishedAt)}</p>
+            <a href={article?.url}>{article?.source?.name}</a>
+            <p>{article?.description}</p>
         </div>
     );
 }
