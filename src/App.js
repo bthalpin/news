@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Nav } from './components';
+import { Home } from './pages';
 import './App.css';
 import {results} from './tempData';
 
 function App() {
   return (
     <div className="App">
-      {results.map((article,index)=><h1 key={index}>{article.title}</h1>)}
+      <Router>
+        <Nav />
+          <Routes>
+            <Route
+              path='/'
+              element={<Home />}
+              />
+          </Routes>
+      </Router>
     </div>
   );
 }
