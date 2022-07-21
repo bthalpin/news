@@ -4,7 +4,6 @@ import {Card} from '../../components';
 import { useStoreContext } from '../../utils/GlobalState';
 import { SET_ORDER,ARTICLES } from '../../utils/actions';
 import './home.css';
-import {results} from '../../tempData';
 
 function Home() {
     const [search,setSearch] = useState('');

@@ -4,7 +4,6 @@ import { Nav } from './components';
 import { Home,Article } from './pages';
 import { StoreProvider } from './utils/GlobalState';
 import './App.css';
-import {results} from './tempData';
 
 function App() {
   useEffect(()=>{
