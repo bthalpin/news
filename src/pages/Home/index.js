@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {Card} from '../../components';
 import { useStoreContext } from '../../utils/GlobalState';
-import { SET_ORDER,ARTICLES } from '../../utils/actions';
+import { SET_ORDER,ARTICLES, CHANGE_SORT_BY } from '../../utils/actions';
 import './home.css';
 
 function Home() {
@@ -19,6 +19,19 @@ function Home() {
             dispatch({
                 type: SET_ORDER,
                 order:'asc',
+            });
+        }
+    }
+    const changeSortBy = () => {
+        if (state.sortBy === 'title'){
+            dispatch({
+                type: CHANGE_SORT_BY,
+                sortBy:'pubDate',
+            });
+        } else {
+            dispatch({
+                type: CHANGE_SORT_BY,
+                sortBy:'title',
             });
         }
     }
@@ -77,14 +90,15 @@ function Home() {
     //         articles: sortedArticles,
     //     })
     // },[state.order])
-
+    console.log(state)
     return (
         <div className="home">
             <div>
                 <input type="text" placeholder="search" value={search} onChange={(e)=>setSearch(e.target.value)}></input>
                 <button onClick={()=>setSearch('')}>Clear</button>
             </div>
-            <button onClick={changeOrder}>change</button>
+            <button onClick={changeOrder}>{state.order}</button>
+            <button onClick={changeSortBy}>{state.sortBy==='pubDate'?'Date':'Title'}</button>
             <div>
                 {state.articles.filter(article=>article.title.toLowerCase().includes(search.toLowerCase())).map((article,index)=><Link to={`/article/${article.title}`} key={index}><Card article={article} /></Link>)}
             </div>

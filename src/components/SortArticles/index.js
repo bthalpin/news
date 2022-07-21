@@ -3,6 +3,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import {ARTICLES} from '../../utils/actions';
 
 function SortArticles() {
+    console.log('sorting')
     const [state,dispatch] = useStoreContext();
 const mergeResults = (left,right) => {
         let merged = [];
@@ -10,7 +11,7 @@ const mergeResults = (left,right) => {
         let j = 0;
         while (i<left.length && j<right.length){
             if (state.order==='asc'){
-                if (left[i].title <= right[j].title){
+                if (left[i][state.sortBy] <= right[j][state.sortBy]){
                     merged.push(left[i]);
                     i++;
                 } else {
@@ -19,7 +20,7 @@ const mergeResults = (left,right) => {
                 }
                 
             } else {
-                if (left[i].title >= right[j].title){
+                if (left[i][state.sortBy] >= right[j][state.sortBy]){
                     merged.push(left[i]);
                     i++;
                 } else {
@@ -58,7 +59,7 @@ const mergeResults = (left,right) => {
             type: ARTICLES,
             articles: sortedArticles,
         })
-    },[state.order])
+    },[state.order,state.sortBy])
     return (
         <></>
     );
