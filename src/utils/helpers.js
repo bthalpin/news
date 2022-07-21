@@ -1,4 +1,5 @@
 export const formatDate = (dateTime) => {
     const date = new Date(dateTime);
-    return date;
+    console.log(date,date.toDateString())
+    return date.toDateString();
 }
