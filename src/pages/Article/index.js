@@ -3,18 +3,19 @@ import { useStoreContext } from '../../utils/GlobalState';
 import './article.css';
 
 function Article() {
-    const { id } = useParams()
-    const [state,dispatch] = useStoreContext();
-
+    const { title } = useParams()
+    const [state] = useStoreContext();
+    const articleTitle = title.replace('%20',' ')
+    const article = state.articles.filter(article=> article.title === articleTitle)[0]
     return (
         <div className="article">
-            {state.articles[id].image_url?
-                <img className="articleImg" src={state.articles[id].image_url} alt={state.articles[id].title}></img>
+            {article.image_url?
+                <img className="articleImg" src={article.image_url} alt={article.title}></img>
             :<></>}
-            <h2>{state.articles[id].title}</h2>
-            <a href={state.articles[id].link}>{state.articles[id].source_id}</a>
+            <h2>{article.title}</h2>
+            <a href={article.link}>{article.source_id}</a>
             {/* Uses description if the content is null */}
-            <p>{state.articles[id].content?state.articles[id].content:state.articles[id].description}</p>
+            <p>{article.content?article.content:article.description}</p>
         </div>
     );
 }
