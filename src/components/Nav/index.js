@@ -1,4 +1,7 @@
 import './nav.css';
+import { useStoreContext } from '../../utils/GlobalState';
+import { ARTICLES } from '../../utils/actions';
+import { useEffect } from 'react';
 
 function Nav() {
     const categories = ['Business','Entertainment','Environment','Food','Health','Politics','Science','Sports','Technology','Top','World']

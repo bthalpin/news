@@ -18,6 +18,8 @@ export const reducer = (state,action) => {
                 ...state,
                 sortBy: action.sortBy,
             };
+        default:
+            return state;
     }
 }
 
