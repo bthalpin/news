@@ -21,7 +21,7 @@ function Home() {
         let j = 0;
         while (i<left.length && j<right.length){
             if (order==='asc'){
-                if (left[i].title <= right[j].title){
+                if (left[i].pubDate <= right[j].pubDate){
                     merged.push(left[i]);
                     i++;
                 } else {
@@ -30,7 +30,7 @@ function Home() {
                 }
                 
             } else {
-                if (left[i].title >= right[j].title){
+                if (left[i].pubDate >= right[j].pubDate){
                     merged.push(left[i]);
                     i++;
                 } else {
@@ -66,7 +66,7 @@ function Home() {
     useEffect(()=>{
         setArticles(sortResults(results));
     },[order])
-
+    
     return (
         <div className="home">
             <div>
