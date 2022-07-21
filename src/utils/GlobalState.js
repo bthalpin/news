@@ -6,13 +6,14 @@ const { Provider } = StoreContext;
 
 const StoreProvider = ({ value = [], ...props })=> {
     const [state,dispatch] = useNewsReducer({
-        articles:[]
-    })
+        articles:[],
+        order:'asc',
+    });
     return <Provider value={[state,dispatch]} {...props} />;
 };
 
 const useStoreContext = () => {
     return useContext(StoreContext);
-}
+};
 
 export { StoreProvider, useStoreContext };

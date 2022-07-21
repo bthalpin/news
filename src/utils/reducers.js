@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import { ARTICLES } from './actions';
+import { ARTICLES, SET_ORDER } from './actions';
 
 export const reducer = (state,action) => {
     switch(action.type) {
@@ -7,6 +7,11 @@ export const reducer = (state,action) => {
             return {
                 ...state,
                 articles: [...action.articles],
+            };
+        case SET_ORDER:
+            return {
+                ...state,
+                order: action.order,
             }
     }
 }
