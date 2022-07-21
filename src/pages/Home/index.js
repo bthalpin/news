@@ -29,7 +29,7 @@ function Home() {
         if (state.sortBy === 'title'){
             dispatch({
                 type: CHANGE_SORT_BY,
-                sortBy:'pubDate',
+                sortBy:'publishedAt',
             });
         } else {
             dispatch({
@@ -104,9 +104,9 @@ function Home() {
                 <Link to={`/article/${state.articles.find(article=>article.title===spotLight).title}`} ><Card article={state.articles.find(article=>article.title===spotLight)} /></Link>
             </div>
             <button onClick={changeOrder}>{state.order}</button>
-            <button onClick={changeSortBy}>{state.sortBy==='pubDate'?'Date':'Title'}</button>
+            <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button>
             <div>
-                {state.articles.filter(article=>article.title.toLowerCase().includes(search.toLowerCase())).map((article,index)=><Link to={`/article/${article.title}`} key={index}><Card article={article} /></Link>)}
+                {state.articles.filter(article=>article.title.toLowerCase().includes(search.toLowerCase())).map((article,index)=><Link to={`/article/${article.publishedAt}`} key={index}><Card article={article} /></Link>)}
             </div>
         </div>
     );

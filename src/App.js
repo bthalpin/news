@@ -22,7 +22,7 @@ function App() {
                 element={<Home />}
                 />
               <Route
-                path='/article/:title'
+                path='/article/:time'
                 element={<Article />}
                 />
             </Routes>

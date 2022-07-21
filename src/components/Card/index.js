@@ -8,9 +8,9 @@ function Card({article}) {
             <h3>{article.title}</h3>
             {article.description?
             <p>{article.description.substring(0,50)}{article.description.length>100?'...':<></>}</p>:<></>}
-            {article.image_url?
-            <img className="cardImg" src={article.image_url} alt={article.title}></img>
-            :<></>}
+            {/* {article.image_url? */}
+            <img className="cardImg" src={article.urlToImage} alt={article.title}></img>
+            {/* :<></>} */}
         </div>
     );
 }
