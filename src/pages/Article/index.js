@@ -11,7 +11,10 @@ function Article() {
     return (
         
         <div className="article">
+            <div>
+
                 <img className="articleImg" src={article?.urlToImage} alt={article?.title}></img>
+            </div>
        
             <h2>{article?.title}</h2>
             {article.author?

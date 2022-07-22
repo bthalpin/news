@@ -26,7 +26,7 @@ function Nav() {
 
             <div className={`navLinkContainer ${open?'expanded':''}`}  onClick={e=>close(e)} >
                 {window.location.pathname==='/'?<></>:
-                <div className={`${open?'collapse':''}`} onClick={()=>navigate(-1)}>Back</div>
+                <div className={`back ${open?'collapse':''}`} onClick={()=>navigate(-1)}>Back</div>
                  }
                 <div className={`menu ${open?'collapse':'expand'}`}  onClick={e=>close(e)} ><img className="menuImage" src="./menu.png" alt="menu"></img></div>
                 <div className={open?'expand':'collapse'} >
