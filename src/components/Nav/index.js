@@ -1,16 +1,22 @@
 import './nav.css';
 import { useStoreContext } from '../../utils/GlobalState';
-import { ARTICLES } from '../../utils/actions';
+import { ARTICLES,CHANGE_TOPIC } from '../../utils/actions';
 import { useState } from 'react';
 
 function Nav() {
+    const [state,dispatch] = useStoreContext();
     const categories = ['Business','Entertainment','General','Health','Science','Sports','Technology']
     const [open,setOpen] = useState(true);
 
+    const changeCategory = (category) => {
+        dispatch({
+            type: CHANGE_TOPIC,
+            topic: category
+        })
+    }
     const close = (e) => {
         e.stopPropagation()
-        open?setOpen(false):setOpen(true);
-        // setOpen(closing)
+        !open&&e.target.className==='menu expand'?setOpen(true):setOpen(false);
     }
     return (
         <div className="nav">
@@ -20,7 +26,7 @@ function Nav() {
                 <div className={open?'expand':'collapse'} >
                 {categories.map((category,index)=>{
                     return (
-                        <div className={`navLink`} key={index} onClick={()=>console.log(category)}>{category}</div>
+                        <div className={`navLink`} key={index} onClick={()=>changeCategory(category)}>{category}</div>
                     )
                 })}
 
