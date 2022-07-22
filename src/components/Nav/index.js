@@ -32,7 +32,7 @@ function Nav() {
                 <div className={open?'expand':'collapse'} >
                 {categories.map((category,index)=>{
                     return (
-                        <div className={`navLink`} key={index} onClick={()=>changeCategory(category)}>{category}</div>
+                        <div className={`navLink ${state.topic===category?'selected':''}`} key={index} onClick={()=>changeCategory(category)}>{category}</div>
                     )
                 })}
 

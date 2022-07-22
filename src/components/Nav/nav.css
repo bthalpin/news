@@ -9,7 +9,10 @@
 .navLink{
     color:white;
     cursor: pointer;
-    padding:1.5rem;
+    padding:1rem;
+}
+.selected{
+    background-color: var(--selected);
 }
 .menu{
     display:flex;
@@ -68,6 +71,25 @@
     .navLink{
         padding:1rem 0;
         font-size: 0.85rem;
+        position: relative;
+    }
+    .selected{
+        background-color: var(--nav);
+    }
+    .selected::after{
+        content:'';
+        background-image:url(/public/pointer.png);
+        background-size:20px 10px;
+        background-position: center;
+        /* display: inline-block; */
+        position:absolute;
+        bottom:0;
+        left:50%;
+        transform:translateX(-50%);
+        width: 20px; 
+        height: 10px;
+    
+        
     }
 
     

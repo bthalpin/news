@@ -3,6 +3,7 @@
   --nav:#2b2b2b;
   --spotlight:rgb(149, 209, 255);
   --shadow:black;
+  --selected:#4a4a4a;
 }
 *{
   margin:0;
