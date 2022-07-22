@@ -12,7 +12,7 @@ function Home() {
     const [searchInput,setSearchInput] = useState('');
     const [sorted,setSorted] = useState(false);
     const [state,dispatch] = useStoreContext();
-    // const [spotLight,setSpotLight] = useState(state.articles[Math.floor(Math.random()*state.articles.length)].title)
+    const [spotLight,setSpotLight] = useState(state.articles[0])
     // setTimeout((
     //     setSpotLight(Math.floor(Math.random()*state.articles.length))
     // ),3000)
@@ -136,12 +136,14 @@ function Home() {
             articles: data.articles
         })
         setSearchInput('')
+
     }
     useEffect(()=>{
         if (!state.topic){
             return
         }
-        loadArticles()
+        // loadArticles()
+
     },[state.topic])
     useEffect(()=>{
         if (search===''){
@@ -151,7 +153,7 @@ function Home() {
             type: CHANGE_TOPIC,
             topic: ''
         })
-        loadArticles()
+        // loadArticles()
         
     },[search])
 
@@ -166,7 +168,10 @@ function Home() {
             articles: sortedArticles,
         })
     },[state.order,state.sortBy,state.articles])
-    console.log(state)
+    useEffect(()=>{
+        setSpotLight(state.articles[Math.floor(Math.random()*state.articles.length)])
+    },[state.articles])
+    console.log(state,'spotlight',spotLight)
     const displayedArticles = state.articles.slice((state.page-1)*15,state.page*15)
     return (
         <div className="home">
@@ -176,7 +181,7 @@ function Home() {
                 <button className="searchBtn" onClick={()=>setSearch(searchInput)}>Search</button>
             </div>
             <div>
-                {/* <Link to={`/article/${state.articles.find(article=>article.title===spotLight).title}`} ><Card article={state.articles.find(article=>article.title===spotLight)} /></Link> */}
+                <Link to={`/article/${spotLight.publishedAt}`} ><Card article={spotLight} /></Link>
             </div>
             <button onClick={changeOrder}>{state.order}</button>
             <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button>

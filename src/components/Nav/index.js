@@ -8,7 +8,7 @@ function Nav() {
     const [state,dispatch] = useStoreContext();
     const navigate = useNavigate()
     const categories = ['General','Business','Entertainment','Health','Science','Sports','Technology']
-    const [open,setOpen] = useState(true);
+    const [open,setOpen] = useState(false);
 
     const changeCategory = (category) => {
         dispatch({

@@ -4,7 +4,19 @@ import { results } from '../tempData';
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
-
+// {
+//     "source": {
+//         "id": null,
+//         "name": ""
+//     },
+//     "author": "",
+//     "title": "",
+//     "description": "",
+//     "url": "",
+//     "urlToImage": "",
+//     "publishedAt": "",
+//     "content": ""
+// }
 const StoreProvider = ({ value = [], ...props })=> {
     const [state,dispatch] = useNewsReducer({
         articles: [...results],

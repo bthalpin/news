@@ -1,7 +1,8 @@
 .card{
+    margin:1rem auto;
     min-height:200px;
     /* border:1px solid red; */
-    box-shadow: 0.5rem 0.5rem 1rem black;
+    box-shadow: 0rem 0.5rem 1rem gray;
 }
 .cardImg{
     height:50%;
