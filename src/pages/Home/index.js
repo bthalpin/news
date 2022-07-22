@@ -204,11 +204,11 @@ function Home() {
             </div>
             <div className="pageNav">
                 {state.page<=1?<div className="placeholder"></div>:
-                <button onClick={()=>changePage('back')}>&#60;</button>
+                <button className="navigationBtn left" onClick={()=>changePage('back')}>&#60;</button>
                 }
                 <p>{state.page}</p>
                 {state.page===Math.ceil(state.articles.length/15)?<div className="placeholder"></div>:
-                <button onClick={()=>changePage('next')}>&#62;</button>
+                <button className="navigationBtn right" onClick={()=>changePage('next')}>&#62;</button>
                 }
             </div>
         </div>

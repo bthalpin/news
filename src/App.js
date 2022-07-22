@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <StoreProvider>
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <Nav />
             <Routes>
               <Route
