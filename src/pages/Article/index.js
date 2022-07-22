@@ -9,14 +9,22 @@ function Article() {
     // const articleTitle = title.replace('%20',' ')
     const article = state.articles.filter(article=> article.publishedAt === time)[0]
     return (
+        
         <div className="article">
                 <img className="articleImg" src={article?.urlToImage} alt={article?.title}></img>
        
             <h2>{article?.title}</h2>
-            <p>Author: {article?.author}</p>
+            {article.author?
+            <p>Author: {article.author}</p>
+            :<></>}
             <p>{formatDate(article?.publishedAt)}</p>
-            <a href={article?.url}>{article?.source?.name}</a>
+            {!article.content?
+            <a href={article?.url} target="_blank">{article?.source?.name}</a>
+            :<></>}
             <p>{article?.description}</p>
+            {article.content?
+            <p>{article.content.split('…')[0]}... Continue reading at <a href={article?.url} target="_blank">{article?.source?.name}</a></p>
+            :<></>}
         </div>
     );
 }
