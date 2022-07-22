@@ -1,5 +1,6 @@
 .card{
-    margin:1rem;
+    /* margin:1rem auto; */
+    /* display:flex; */
     min-height:200px;
     border-radius: 0.2rem;
     box-shadow: 0rem 0.5rem 1rem var(--shadow);
@@ -8,4 +9,22 @@
     height:50%;
     max-height: 300px;
     max-width: calc(95vw - 2rem);
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+
+}
+
+@media screen and (min-width:700px) {
+    .card{
+        /* margin:1rem auto; */
+        display:flex;
+        justify-content: space-between;
+        /* min-height:200px;
+        border-radius: 0.2rem;
+        box-shadow: 0rem 0.5rem 1rem var(--shadow); */
+    }
+    .cardText{
+        width:100%;
+        padding:2rem;
+    }
 }

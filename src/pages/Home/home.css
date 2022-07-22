@@ -74,7 +74,13 @@
     }
     .articleContainer{
         padding:1rem 2rem;
-        display:flex;
-        flex-wrap: wrap;
+        /* display:flex; */
+        /* flex-wrap: wrap; */
+    }
+    .articleLink{
+        margin:1rem auto;
+        width:90vw;
+        max-width:1400px;
+        border-radius: 0.5rem;
     }
 }
