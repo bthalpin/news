@@ -1,0 +1,7 @@
+.pageNav{
+    display: flex;
+    justify-content: center;
+}
+.placeholder{
+    width:25px;
+}

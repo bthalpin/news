@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {Card} from '../../components';
 import { useStoreContext } from '../../utils/GlobalState';
-import { SET_ORDER,ARTICLES, CHANGE_SORT_BY } from '../../utils/actions';
+import { SET_ORDER,ARTICLES, CHANGE_SORT_BY,CHANGE_PAGE } from '../../utils/actions';
 import './home.css';
 
 function Home() {
@@ -35,6 +35,20 @@ function Home() {
             dispatch({
                 type: CHANGE_SORT_BY,
                 sortBy:'title',
+            });
+        }
+    }
+
+    const changePage = (direction) => {
+        if (direction === 'back'){
+            dispatch({
+                type: CHANGE_PAGE,
+                page:state.page-1,
+            });
+        } else {
+            dispatch({
+                type: CHANGE_PAGE,
+                page:state.page+1,
             });
         }
     }
@@ -94,6 +108,7 @@ function Home() {
     //     })
     // },[state.order])
     console.log(state)
+    const displayedArticles = state.articles.slice((state.page-1)*15,state.page*15)
     return (
         <div className="home">
             <div>
@@ -106,7 +121,16 @@ function Home() {
             <button onClick={changeOrder}>{state.order}</button>
             <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button>
             <div>
-                {state.articles.filter(article=>article.title.toLowerCase().includes(search.toLowerCase())).map((article,index)=><Link to={`/article/${article.publishedAt}`} key={index}><Card article={article} /></Link>)}
+                {displayedArticles.map((article,index)=><Link to={`/article/${article.publishedAt}`} key={index}><Card article={article} /></Link>)}
+            </div>
+            <div className="pageNav">
+                {state.page<=1?<div className="placeholder"></div>:
+                <button onClick={()=>changePage('back')}>&#60;</button>
+                }
+                <p>{state.page}</p>
+                {state.page===Math.ceil(state.articles.length/15)?<div className="placeholder"></div>:
+                <button onClick={()=>changePage('next')}>&#62;</button>
+                }
             </div>
         </div>
     );
