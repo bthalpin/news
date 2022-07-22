@@ -1,9 +1,11 @@
 :root{
   --main:white;
   --nav:#2b2b2b;
-  --spotlight:rgb(149, 209, 255);
+  --spotlight:#cbd4e0;
   --shadow:black;
   --selected:#4a4a4a;
+  --search:#42d4fc;
+  --outline: #89ceeb;
 }
 *{
   margin:0;

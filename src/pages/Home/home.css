@@ -10,15 +10,15 @@
 }
 .search {
     padding:0.2rem;
-    border:2px solid red;
+    border:2px solid var(--search);
     border-left:none;
     border-right:none;
 }
 .search:focus{
-    outline-color: blue;
+    outline-color: var(--outline);
 }
 .clearSearch,.searchBtn{
-    border:2px solid red;
+    border:2px solid var(--search);
     padding:0.2rem;
 }
 .clearSearch{
@@ -33,6 +33,7 @@
     border-bottom-right-radius: 0.5rem;
 
 }
+
 .spotLightCard{
     margin-top:1rem;
     background-color: var(--spotlight);
@@ -48,6 +49,10 @@
 }
 
 @media screen and (min-width:500px) {
+    .spotLightLink{
+        width:min-content;
+        margin:auto;
+    }
     .spotLightCard{
         margin:1rem auto;
         display:flex;

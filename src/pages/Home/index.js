@@ -180,7 +180,7 @@ function Home() {
                 <input className="search" type="text" placeholder="search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
                 <button className="searchBtn" onClick={()=>setSearch(searchInput)}>Search</button>
             </div>
-            <div>
+            <div  className="spotLightLink">
                 <Link to={`/article/${spotLight.publishedAt}`} >
                 <div className="spotLightCard">
                 {/* <p>{article.description.substring(0,50)}{article.description.length>100?'...':<></>}</p> */}
