@@ -11,9 +11,7 @@
     height:50%;
     max-height: 300px;
     max-width: calc(95vw - 2rem);
-    border-top-left-radius: 0.2rem;
-    border-bottom-left-radius: 0.2rem;
-
+    
 }
 .cardText{
     overflow-wrap: break-word;
@@ -44,5 +42,7 @@
     }
     .cardImg{
         max-height:240px;
+        border-top-left-radius: 0.2rem;
+        border-bottom-left-radius: 0.2rem;
     }
 }

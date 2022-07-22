@@ -50,7 +50,7 @@
     background-color: var(--button);
     cursor: pointer;
     color:white;
-    padding:0.2rem 0.5rem;
+    padding:0.4rem 0.6rem;
     border:none;
     border-radius: 0.2rem;
 }
@@ -69,7 +69,20 @@
     top:10;
     right:0;
     background-color: var(--main);
+    border:1px solid var(--button);
     width:10rem;
+}
+.dropItem{
+    cursor: pointer;
+    padding:0.2rem 0.5rem;
+}
+.dropItem:hover{
+    background-color: var(--outline);
+    color:white;
+}
+.select{
+    background-color: var(--search);
+    color:white;
 }
 .hide{
     display:none;

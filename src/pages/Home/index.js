@@ -225,16 +225,16 @@ function Home() {
 
             <div className={`dropdown ${dropdown?'show':'hide'}`} onClick={changeSort}>
 
-            <div id="recent" >
+            <div id="recent" className={`dropItem ${state.sortBy==='publishedAt'&&state.order==='asc'?'select':''}`}>
                     Most Recent
             </div>
-            <div  id="oldest">
+            <div  id="oldest" className={`dropItem ${state.sortBy==='publishedAt'&&state.order==='desc'?'select':''}`}>
                     Oldest First
             </div>
-            <div  id="AZ">
+            <div  id="AZ" className={`dropItem ${state.sortBy==='title'&&state.order==='asc'?'select':''}`}>
                     Title: A-Z
             </div>
-            <div  id="ZA">
+            <div  id="ZA" className={`dropItem ${state.sortBy==='title'&&state.order==='desc'?'select':''}`}>
                     Title: Z-A
             </div>
             </div>
