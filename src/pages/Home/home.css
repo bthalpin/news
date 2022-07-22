@@ -1,8 +1,12 @@
 .searchContainer{
     display:flex;
     justify-content:center;
+    max-width: 95vw;
+    margin:auto;
 }
 .search {
+    max-width:70vw;
+    
     font-size: 1.1rem;
     padding:0.2rem 0.5rem;
     border:2px solid var(--search);
@@ -36,7 +40,7 @@
 
 }
 .toggleSort{
-    position: relative;
+    /* position: relative; */
     display:flex;
     justify-content: flex-end;
     /* width:90vw; */
@@ -62,7 +66,7 @@
 }
 .dropdown{
     position:absolute;
-    top:0;
+    top:10;
     right:0;
     background-color: var(--main);
     width:10rem;
@@ -138,14 +142,18 @@
         object-fit: cover;
     }
     .articleContainer{
-        padding:1rem 2rem;
+        /* padding:1rem 2rem; */
         /* display:flex; */
         /* flex-wrap: wrap; */
     }
     .articleLink{
         margin:1rem auto;
-        width:90vw;
+        width:95vw;
         max-width:1400px;
         border-radius: 0.5rem;
+    }
+    .toggleSort{
+        position: relative;
+        width:80vw;
     }
 }

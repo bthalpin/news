@@ -1,8 +1,10 @@
 .card{
-    /* margin:1rem auto; */
+    margin:1rem auto;
+    padding: 0 1rem 1rem;
     /* display:flex; */
-    min-height:200px;
+    /* min-height:200px; */
     border-radius: 0.2rem;
+    border-top:1px solid var(--shadow);
     box-shadow: 0rem 0.5rem 1rem var(--shadow);
 }
 .cardImg{
@@ -13,18 +15,34 @@
     border-bottom-left-radius: 0.2rem;
 
 }
-
-@media screen and (min-width:700px) {
+.cardText{
+    overflow-wrap: break-word;
+    font-size: 0.8rem;
+}
+.cardText p {
+    display:none;
+}
+@media screen and (min-width:500px) {
+    .cardText p {
+        display:block;
+    }
+}
+@media screen and (min-width:800px) {
     .card{
         /* margin:1rem auto; */
         display:flex;
         justify-content: space-between;
+        padding:0;
         /* min-height:200px;
         border-radius: 0.2rem;
         box-shadow: 0rem 0.5rem 1rem var(--shadow); */
     }
     .cardText{
+        font-size: 1rem;
         width:100%;
-        padding:2rem;
+        padding:1rem;
+    }
+    .cardImg{
+        max-height:240px;
     }
 }
