@@ -8,6 +8,7 @@ import sortResults from '../../utils/sorting';
 
 function Home() {
     const [search,setSearch] = useState('');
+    const [dropdown,setDropDown] = useState(false)
     const [searched,setSearched] = useState(false);
     const [searchInput,setSearchInput] = useState('');
     const [sorted,setSorted] = useState(false);
@@ -57,6 +58,49 @@ function Home() {
                 page:state.page+1,
             });
         }
+    }
+    const changeSort = (e) => {
+        switch (e.target.id){
+            case 'recent':
+                if (state.order==='desc'){
+                    changeOrder()
+                }
+                if (state.sortBy==='title'){
+                    changeSortBy()
+                }
+                return
+            case 'oldest':
+                if (state.order==='asc'){
+                    changeOrder()
+                }
+                if (state.sortBy==='title'){
+                    changeSortBy()
+                }
+                return
+            case 'AZ':
+                if (state.order==='desc'){
+                    changeOrder()
+                }
+                if (state.sortBy==='publishedAt'){
+                    changeSortBy()
+                }
+                return
+            case 'ZA':
+                if (state.order==='asc'){
+                    changeOrder()
+                }
+                if (state.sortBy==='publishedAt'){
+                    changeSortBy()
+                }
+                return
+            default:
+                return;
+        }
+        // e.target.text
+    }
+    const closeDropDown = (e) => {
+        e.stopPropagation()
+        setDropDown(false)
     }
     // const mergeResults = (left,right) => {
     //     let merged = [];
@@ -175,6 +219,27 @@ function Home() {
     const displayedArticles = state.articles.slice((state.page-1)*15,state.page*15)
     return (
         <div className="home">
+        <div  className="toggleSort">
+            <button className="dropdownBtn" onClick={()=>setDropDown(true)}>Sort by: {state.sortBy==='publishedAt'?`Date - ${state.order==='asc'?'Newest':'Oldest'}`:`Title - ${state.order==='asc'?'a-z':'z-a'}`}</button>
+            <div className={`dropContainer  ${dropdown?'show':'hide'}`} onClick={(e)=>closeDropDown(e)}>
+
+            <div className={`dropdown ${dropdown?'show':'hide'}`} onClick={changeSort}>
+
+            <div id="recent" >
+                    Most Recent
+            </div>
+            <div  id="oldest">
+                    Oldest First
+            </div>
+            <div  id="AZ">
+                    Title: A-Z
+            </div>
+            <div  id="ZA">
+                    Title: Z-A
+            </div>
+            </div>
+            </div>
+        </div>
             <div className="searchContainer">
                 <button className="clearSearch" onClick={()=>setSearchInput('')}>Clear</button>
                 <input className="search" type="text" placeholder="Search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
@@ -197,8 +262,8 @@ function Home() {
         </div>
                 </Link>
             </div>
-            <button onClick={changeOrder}>{state.order}</button>
-            <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button>
+            {/* <button onClick={changeOrder}>{state.order}</button>
+            <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button> */}
             <div className="articleContainer">
                 {displayedArticles.map((article,index)=><div className="articleLink"><Link to={`/article/${article.publishedAt}`} key={index}><Card article={article} /></Link></div>)}
             </div>

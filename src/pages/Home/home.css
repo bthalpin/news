@@ -1,5 +1,4 @@
 .searchContainer{
-    margin-top:1rem;
     display:flex;
     justify-content:center;
 }
@@ -35,6 +34,41 @@
 .searchBtn>*{
     width:1.3rem;
 
+}
+.toggleSort{
+    position: relative;
+    display:flex;
+    justify-content: flex-end;
+    /* width:90vw; */
+    margin: 1rem;
+}
+.dropdownBtn{
+    background-color: var(--button);
+    cursor: pointer;
+    color:white;
+    padding:0.2rem 0.5rem;
+    border:none;
+    border-radius: 0.2rem;
+}
+.dropContainer::before{
+    content:'';
+    position:fixed;
+    background-color: black;
+    opacity: 0.2;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.dropdown{
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: var(--main);
+    width:10rem;
+}
+.hide{
+    display:none;
 }
 .spotLightCard{
     margin-top:1rem;
@@ -82,6 +116,7 @@
     .spotLightLink{
         width:min-content;
         margin:auto;
+        border-bottom:1px solid var(--shadow);
     }
     .spotLightCard{
         margin:1rem auto;
