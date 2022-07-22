@@ -10,12 +10,14 @@ function Home() {
     const [search,setSearch] = useState('');
     const [searched,setSearched] = useState(false);
     const [searchInput,setSearchInput] = useState('');
+    const [sorted,setSorted] = useState(false);
     const [state,dispatch] = useStoreContext();
     // const [spotLight,setSpotLight] = useState(state.articles[Math.floor(Math.random()*state.articles.length)].title)
     // setTimeout((
     //     setSpotLight(Math.floor(Math.random()*state.articles.length))
     // ),3000)
     const changeOrder = () => {
+        setSorted(false)
         if (state.order === 'asc'){
             dispatch({
                 type: SET_ORDER,
@@ -29,6 +31,7 @@ function Home() {
         }
     }
     const changeSortBy = () => {
+        setSorted(false)
         if (state.sortBy === 'title'){
             dispatch({
                 type: CHANGE_SORT_BY,
@@ -111,6 +114,9 @@ function Home() {
     //     })
     // },[state.order])
     const loadArticles = async () => {
+        if (sorted){
+            setSorted(false)    
+        }
         let results;
         if (search&&searchInput){
             results = await fetch(`https://newsapi.org/v2/everything?language=en&apiKey=${process.env.REACT_APP_NEWS_API}&q=${search}`)
@@ -150,12 +156,16 @@ function Home() {
     },[search])
 
      useEffect(()=>{
+         if (sorted){
+             return
+         }
         const sortedArticles = sortResults(state.articles,state);
+        setSorted(true)
         dispatch({
             type: ARTICLES,
             articles: sortedArticles,
         })
-    },[state.order,state.sortBy])
+    },[state.order,state.sortBy,state.articles])
     console.log(state)
     const displayedArticles = state.articles.slice((state.page-1)*15,state.page*15)
     return (
