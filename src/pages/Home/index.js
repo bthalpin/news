@@ -184,15 +184,15 @@ function Home() {
                 <Link to={`/article/${spotLight.publishedAt}`} >
                 <div className="spotLightCard">
                 {/* <p>{article.description.substring(0,50)}{article.description.length>100?'...':<></>}</p> */}
-                <div>
+                <div className="imageContainer">
                     {spotLight.urlToImage?
                     <img className="spotLightImg" src={spotLight.urlToImage} alt={spotLight.title}></img>
                     :<></>} 
 
                 </div>
-                <div>
+                <div className="spotLightText">
                     <h3>{spotLight.title}</h3>
-
+                    <p>{spotLight.description}</p>
                 </div>
         </div>
                 </Link>

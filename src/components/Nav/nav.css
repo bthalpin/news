@@ -57,10 +57,18 @@
         position:relative;
         display:flex;
         justify-content: space-around;
-        width:100vw;
+        width:98vw;
     }
     .menu,.back{
         display:none;
     }
+    .nav{
+        padding:0;
+    }
+    .navLink{
+        padding:1rem 0;
+        font-size: 0.85rem;
+    }
+
     
 }
