@@ -1,7 +1,7 @@
 .nav{
     background-color: #2b2b2b;
     display:flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding:1rem;
     position:relative;
 }
