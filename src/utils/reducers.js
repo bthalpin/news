@@ -1,5 +1,5 @@
 import { useReducer } from 'react';
-import { ARTICLES, SET_ORDER, CHANGE_SORT_BY, CHANGE_PAGE, CHANGE_TOPIC } from './actions';
+import { ARTICLES, SET_ORDER, CHANGE_SORT_BY, CHANGE_PAGE, CHANGE_TOPIC, SEARCH } from './actions';
 
 export const reducer = (state,action) => {
     switch(action.type) {
@@ -27,6 +27,11 @@ export const reducer = (state,action) => {
             return {
                 ...state,
                 topic: action.topic,
+            };
+        case SEARCH:
+            return {
+                ...state,
+                search: action.search,
             };
         default:
             return state;

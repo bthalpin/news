@@ -11,7 +11,8 @@ const StoreProvider = ({ value = [], ...props })=> {
         order: 'asc',
         sortBy: 'publishedAt',
         page: 1,
-        topic:'General'
+        topic:'General',
+        search:''
     });
     return <Provider value={[state,dispatch]} {...props} />;
 };
