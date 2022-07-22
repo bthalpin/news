@@ -1,11 +1,11 @@
 .card{
     margin:1rem;
     min-height:200px;
-    /* border:1px solid red; */
-    box-shadow: 0rem 0.5rem 1rem gray;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0.5rem 1rem var(--shadow);
 }
 .cardImg{
     height:50%;
     max-height: 300px;
-    max-width: 90vw;
+    max-width: calc(95vw - 2rem);
 }
