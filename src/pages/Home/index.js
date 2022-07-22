@@ -4,6 +4,7 @@ import {Card} from '../../components';
 import { useStoreContext } from '../../utils/GlobalState';
 import { SET_ORDER,ARTICLES, CHANGE_SORT_BY,CHANGE_PAGE } from '../../utils/actions';
 import './home.css';
+import sortResults from '../../utils/sorting';
 
 function Home() {
     const [search,setSearch] = useState('');
@@ -107,6 +108,14 @@ function Home() {
     //         articles: sortedArticles,
     //     })
     // },[state.order])
+
+     useEffect(()=>{
+        const sortedArticles = sortResults(state.articles,state);
+        dispatch({
+            type: ARTICLES,
+            articles: sortedArticles,
+        })
+    },[state.order,state.sortBy])
     console.log(state)
     const displayedArticles = state.articles.slice((state.page-1)*15,state.page*15)
     return (

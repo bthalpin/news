@@ -1,5 +1,5 @@
 import Nav from './Nav';
 import Card from './Card';
-import SortArticles from './SortArticles';
+// import SortArticles from './SortArticles';
 
-export {Nav,Card,SortArticles}
+export {Nav,Card}

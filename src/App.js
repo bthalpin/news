@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Nav,SortArticles } from './components';
+import { Nav } from './components';
 import { Home,Article } from './pages';
 import { StoreProvider } from './utils/GlobalState';
 import './App.css';
@@ -15,7 +15,6 @@ function App() {
       <Router>
         <StoreProvider>
           <Nav />
-          <SortArticles />
             <Routes>
               <Route
                 path='/'
