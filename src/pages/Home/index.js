@@ -108,6 +108,17 @@ function Home() {
     //         articles: sortedArticles,
     //     })
     // },[state.order])
+    const loadArticles = async () => {
+        const results = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API}&pageSize=100&category=${state.topic}`)
+        const data = await results.json()
+        dispatch({
+            type: ARTICLES,
+            articles: data.articles
+        })
+    }
+    useEffect(()=>{
+        loadArticles()
+    },[state.topic])
 
      useEffect(()=>{
         const sortedArticles = sortResults(state.articles,state);

@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function Nav() {
     const [state,dispatch] = useStoreContext();
-    const categories = ['Business','Entertainment','General','Health','Science','Sports','Technology']
+    const categories = ['General','Business','Entertainment','Health','Science','Sports','Technology']
     const [open,setOpen] = useState(true);
 
     const changeCategory = (category) => {
