@@ -8,9 +8,11 @@
 .navLink{
     color:white;
     cursor: pointer;
+    padding:1.5rem;
 }
-.menu{
-    color:white;
+.menuImage{
+    width:1rem;
+    padding:0.3rem 1rem;
 }
 .expanded{
     position: fixed;
@@ -34,7 +36,7 @@
     position:absolute;
     top:0;
     right:0;
-    padding:1.5rem;
+    /* padding:1.5rem; */
     background-color: #2b2b2b;
 
 }

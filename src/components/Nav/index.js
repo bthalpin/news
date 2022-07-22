@@ -16,13 +16,13 @@ function Nav() {
     }
     const close = (e) => {
         e.stopPropagation()
-        !open&&e.target.className==='menu expand'?setOpen(true):setOpen(false);
+        !open&&(e.target.className==='menu expand'||e.target.className==='menuImage')?setOpen(true):setOpen(false);
     }
     return (
         <div className="nav">
 
             <div className={`navLinkContainer ${open?'expanded':''}`}  onClick={e=>close(e)} >
-                <div className={`menu ${open?'collapse':'expand'}`}  onClick={e=>close(e)} >OPEN</div>
+                <div className={`menu ${open?'collapse':'expand'}`}  onClick={e=>close(e)} ><img className="menuImage" src="menu.png" alt="menu"></img></div>
                 <div className={open?'expand':'collapse'} >
                 {categories.map((category,index)=>{
                     return (

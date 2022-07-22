@@ -170,10 +170,10 @@ function Home() {
     const displayedArticles = state.articles.slice((state.page-1)*15,state.page*15)
     return (
         <div className="home">
-            <div>
-                <input type="text" placeholder="search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
-                <button onClick={()=>setSearchInput('')}>Clear</button>
-                <button onClick={()=>setSearch(searchInput)}>Search</button>
+            <div className="searchContainer">
+                <button className="clearSearch" onClick={()=>setSearchInput('')}>Clear</button>
+                <input className="search" type="text" placeholder="search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
+                <button className="searchBtn" onClick={()=>setSearch(searchInput)}>Search</button>
             </div>
             <div>
                 {/* <Link to={`/article/${state.articles.find(article=>article.title===spotLight).title}`} ><Card article={state.articles.find(article=>article.title===spotLight)} /></Link> */}

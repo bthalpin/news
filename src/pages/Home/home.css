@@ -5,3 +5,22 @@
 .placeholder{
     width:25px;
 }
+.searchContainer{
+    margin-top:1rem;
+}
+.search {
+    padding:0.2rem;
+}
+.clearSearch,.searchBtn{
+    padding:0.2rem;
+
+}
+.clearSearch{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.searchBtn{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+}
