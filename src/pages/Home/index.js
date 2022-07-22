@@ -177,8 +177,8 @@ function Home() {
         <div className="home">
             <div className="searchContainer">
                 <button className="clearSearch" onClick={()=>setSearchInput('')}>Clear</button>
-                <input className="search" type="text" placeholder="search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
-                <button className="searchBtn" onClick={()=>setSearch(searchInput)}>Search</button>
+                <input className="search" type="text" placeholder="Search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
+                <button className="searchBtn" onClick={()=>setSearch(searchInput)}><img src="/search.png" alt="Search"></img></button>
             </div>
             <div  className="spotLightLink">
                 <Link to={`/article/${spotLight.publishedAt}`} >
