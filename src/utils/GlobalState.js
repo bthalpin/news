@@ -8,8 +8,10 @@ const { Provider } = StoreContext;
 const StoreProvider = ({ value = [], ...props })=> {
     const [state,dispatch] = useNewsReducer({
         articles: [...results],
-        order:'asc',
-        sortBy:'date',
+        order: 'asc',
+        sortBy: 'publishedAt',
+        page: 1,
+        topic:''
     });
     return <Provider value={[state,dispatch]} {...props} />;
 };
