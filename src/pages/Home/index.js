@@ -199,7 +199,7 @@ function Home() {
             </div>
             <button onClick={changeOrder}>{state.order}</button>
             <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button>
-            <div>
+            <div className="articleContainer">
                 {displayedArticles.map((article,index)=><Link to={`/article/${article.publishedAt}`} key={index}><Card article={article} /></Link>)}
             </div>
             <div className="pageNav">

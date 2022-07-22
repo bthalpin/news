@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Nav } from './components';
+import { Nav,ScrollToTop } from './components';
 import { Home,Article } from './pages';
 import { StoreProvider } from './utils/GlobalState';
 import './App.css';
@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <StoreProvider>
+          <ScrollToTop />
           <Nav />
             <Routes>
               <Route
