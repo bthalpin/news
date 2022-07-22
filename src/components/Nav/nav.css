@@ -42,3 +42,16 @@
     display:none;
 
 }
+
+@media screen and (min-width:500px) {
+    .collapse{
+        position:relative;
+        display:flex;
+        justify-content: space-around;
+        width:100vw;
+    }
+    .menu{
+        display:none;
+    }
+    
+}
