@@ -11,7 +11,7 @@ function App() {
       <Router>
 
         <StoreProvider>
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
           <Nav />
             <Routes>
               <Route

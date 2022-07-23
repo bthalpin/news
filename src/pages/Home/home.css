@@ -15,6 +15,7 @@
 }
 .search:focus{
     outline-color: var(--outline);
+    box-shadow: 0 0 0.7rem var(--outline);
 }
 .clearSearch,.searchBtn{
     font-size: 1.1rem;
@@ -26,6 +27,10 @@
     border-right:none;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
+    transition:all 0.2s ease-in-out;
+}
+.clearSearch:hover{
+    background-color: var(--spotlight);
 }
 .searchBtn{
     background-color: white;
@@ -34,10 +39,14 @@
     border-bottom-right-radius: 0.5rem;
     display:flex;
     align-items: center;
+    transition:all 0.2s ease-in-out;
 }
 .searchBtn>*{
     width:1.3rem;
-
+}
+.searchBtn:hover{
+    /* background-color: var(--border); */
+    box-shadow: 0 0 0.5rem var(--outline);
 }
 .toggleSort{
     /* position: relative; */
@@ -52,8 +61,12 @@
     /* color:white; */
     
     padding:0.4rem 0.6rem;
-    border:1px solid var(--outline);
+    border:1px solid var(--button);
     border-radius: 0.2rem;
+    transition: all 0.2s ease-in-out;
+}
+.dropdownBtn:hover{
+    background-color: var(--hover);
 }
 .dropContainer::before{
     content:'';
@@ -113,20 +126,25 @@
 }
 .pageNav>*{
     font-size: 1.5rem;
-    padding:0.3rem 0.8rem;
+    padding:0 0.5rem;
 
 }
 .placeholder{
-    width:4.6rem;
+    width:4.1rem;
 }
 .navigationBtn{
     margin:0 1rem;
     cursor: pointer;
-    background-color: var(--button);
-    color:white;
-    border:2px solid white;
+    background-color: var(--spotlight);
+    color:var(--selected);
+    border:2px solid var(--button);
     border-radius:50%;
+    transition: all 0.2s ease-in-out;
 }
+.navigationBtn:hover{
+    background-color: var(--hover);
+}
+
 /* .left{
     border-top-left-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
