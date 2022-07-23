@@ -2,11 +2,12 @@ import './nav.css';
 import { useStoreContext } from '../../utils/GlobalState';
 import { CHANGE_TOPIC } from '../../utils/actions';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 
 function Nav() {
     const [state,dispatch] = useStoreContext();
     const navigate = useNavigate()
+    const {pathname} = useLocation()
 
     // Navigation links
     const categories = ['General','Business','Entertainment','Health','Science','Sports','Technology']
@@ -20,7 +21,7 @@ function Nav() {
             type: CHANGE_TOPIC,
             topic: category
         })
-        if (navigate.pathname !== '/') {
+        if (pathname !== '/') {
             navigate('/')
         }
     }
@@ -38,7 +39,7 @@ function Nav() {
             <div className={`navLinkContainer ${open?'expanded':''}`}  onClick={e=>close(e)} >
 
                 {/* Only displays back when not on homepage and when dropdown is closed */}
-                {window.location.pathname==='/'?<></>:
+                {pathname==='/'?<></>:
                     <div className={`back ${open?'collapse':''}`} onClick={()=>navigate(-1)}>Back</div>
                 }
 
