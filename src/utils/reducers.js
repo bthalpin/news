@@ -3,6 +3,8 @@ import { ARTICLES, SET_ORDER, CHANGE_SORT_BY, CHANGE_PAGE, CHANGE_TOPIC, SEARCH 
 
 export const reducer = (state,action) => {
     switch(action.type) {
+
+        // updates state based on action/property
         case ARTICLES:
             return {
                 ...state,

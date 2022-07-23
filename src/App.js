@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Nav,ScrollToTop } from './components';
 import { Home,Article } from './pages';
@@ -7,10 +6,10 @@ import './App.css';
 
 function App() {
   
-
   return (
     <div className="App">
       <Router>
+
         <StoreProvider>
           <ScrollToTop />
           <Nav />

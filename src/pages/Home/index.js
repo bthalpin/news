@@ -7,16 +7,24 @@ import './home.css';
 import sortResults from '../../utils/sorting';
 
 function Home() {
-    const [search,setSearch] = useState('');
-    const [dropdown,setDropDown] = useState(false)
-    const [searched,setSearched] = useState(false);
-    const [searchInput,setSearchInput] = useState('');
-    const [sorted,setSorted] = useState(false);
     const [state,dispatch] = useStoreContext();
+    
+    // Stores search input
+    const [searchInput,setSearchInput] = useState('');
+
+    // Submitted search input to retrieve data
+    const [search,setSearch] = useState('');
+
+    // Handles sorting dropdown open/close
+    const [dropdown,setDropDown] = useState(false)
+
+    // Triggers sorting algorithm when fetching new data
+    const [sorted,setSorted] = useState(false);
+
+    // Article to be featured
     const [spotLight,setSpotLight] = useState(state.articles[0])
-    // setTimeout((
-    //     setSpotLight(Math.floor(Math.random()*state.articles.length))
-    // ),3000)
+    
+    // Switches between ascending or descending
     const changeOrder = () => {
         setSorted(false)
         if (state.order === 'asc'){
@@ -31,6 +39,8 @@ function Home() {
             });
         }
     }
+
+    // Switches between title and publishedAt
     const changeSortBy = () => {
         setSorted(false)
         if (state.sortBy === 'title'){
@@ -46,6 +56,7 @@ function Home() {
         }
     }
 
+    // Navigates pages
     const changePage = (direction) => {
         if (direction === 'back'){
             dispatch({
@@ -59,6 +70,8 @@ function Home() {
             });
         }
     }
+
+    // Changes both order and sortby if new value is different from current state
     const changeSort = (e) => {
         switch (e.target.id){
             case 'recent':
@@ -96,103 +109,66 @@ function Home() {
             default:
                 return;
         }
-        // e.target.text
     }
+
+    // Handles closing of sort by dropdown
     const closeDropDown = (e) => {
         e.stopPropagation()
         setDropDown(false)
     }
-    // const mergeResults = (left,right) => {
-    //     let merged = [];
-    //     let i = 0;
-    //     let j = 0;
-    //     while (i<left.length && j<right.length){
-    //         if (state.order==='asc'){
-    //             if (left[i].title <= right[j].title){
-    //                 merged.push(left[i]);
-    //                 i++;
-    //             } else {
-    //                 merged.push(right[j]);
-    //                 j++;
-    //             }
-                
-    //         } else {
-    //             if (left[i].title >= right[j].title){
-    //                 merged.push(left[i]);
-    //                 i++;
-    //             } else {
-    //                 merged.push(right[j]);
-    //                 j++;
-    //             }
-
-    //         }
-    //     }
-
-    //     while (i<left.length){
-    //         merged.push(left[i]);
-    //         i++;
-    //     }
-    //     while (j<right.length){
-    //         merged.push(right[j]);
-    //         j++;
-    //     }
-
-    //     return merged;
-
-    // }
-    // const sortResults = (arr) => {
-    //     if (arr.length<=1){
-    //         return arr;
-    //     }
-    //     const middle = Math.floor(arr.length/2);
-    //     const left = sortResults(arr.slice(0,middle));
-    //     const right = sortResults(arr.slice(middle));
-
-    //     return mergeResults(left,right)
-    // }
-    // useEffect(()=>{
-    //     const sortedArticles = sortResults(state.articles);
-    //     dispatch({
-    //         type: ARTICLES,
-    //         articles: sortedArticles,
-    //     })
-    // },[state.order])
+    
     const loadArticles = async () => {
-        if (sorted){
-            setSorted(false)    
-        }
-        let results;
-        if (search&&searchInput){
-            const formattedSearch = search.replace(/[^a-zA-Z0-9 ]/g,'').trim()
-            results = await fetch(`https://newsapi.org/v2/everything?language=en&apiKey=${process.env.REACT_APP_NEWS_API}&q=${formattedSearch}`)
-            setSearch('')
-            setSearched(true)
-        } else {
-            results = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API}&pageSize=100&category=${state.topic}`)
+        try {
 
+            // Ensures new data will be sorted
+            if (sorted){
+                setSorted(false)    
+            }
+
+            // Retrieves data from API by category or by search
+            let results;
+            if (search&&searchInput){
+                const formattedSearch = search.replace(/[^a-zA-Z0-9 ]/g,'').trim()
+                results = await fetch(`https://newsapi.org/v2/everything?language=en&apiKey=${process.env.REACT_APP_NEWS_API}&q=${formattedSearch}`)
+                setSearch('')
+            } else {
+                results = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API}&pageSize=100&category=${state.topic}`)
+            }
+            const data = await results.json()
+            dispatch({
+                type: CHANGE_PAGE,
+                page: 1
+            })
+            dispatch({
+                type: ARTICLES,
+                articles: data.articles
+            })
+
+            // Stores data to handle page refresh
+            localStorage.setItem('news',JSON.stringify(data))
+            setSearchInput('')
+
+        } catch (err) {
+            console.log(err)
         }
-        const data = await results.json()
-        dispatch({
-            type: CHANGE_PAGE,
-            page: 1
-        })
-        dispatch({
-            type: ARTICLES,
-            articles: data.articles
-        })
-        console.log(data)
-        localStorage.setItem('news',JSON.stringify(data))
-        setSearchInput('')
 
     }
+
+    // Loads articles on category selection
     useEffect(()=>{
+
+        // Prevents triggering when searching
         if (!state.topic){
             return
         }
         // loadArticles()
 
     },[state.topic])
+
+    // Loads articles on search
     useEffect(()=>{
+
+        // Prevents loop when clearing search after fetch
         if (search===''){
             return
         }
@@ -204,10 +180,11 @@ function Home() {
         
     },[search])
 
-     useEffect(()=>{
-         if (sorted){
+    // Calls sorting algorith if not sorted
+    useEffect(()=>{
+        if (sorted){
              return
-         }
+        }
         const sortedArticles = sortResults(state.articles,state);
         setSorted(true)
         dispatch({
@@ -215,63 +192,81 @@ function Home() {
             articles: sortedArticles,
         })
     },[state.order,state.sortBy,state.articles])
+
+    // Sets random article to be highlighted 
     useEffect(()=>{
         setSpotLight(state.articles[Math.floor(Math.random()*state.articles.length)])
     },[state.articles])
-    console.log(state,'spotlight',spotLight)
+
+    // Displays only 15 articles at a time
     const displayedArticles = state.articles.slice((state.page-1)*15,state.page*15)
+
     return (
         <div className="home">
-        <div  className="toggleSort">
-            <button className="dropdownBtn" onClick={()=>setDropDown(true)}>Sort by: {state.sortBy==='publishedAt'?`${state.order==='asc'?'Newest':'Oldest'}`:`${state.order==='asc'?'A-Z':'Z-A'}`}</button>
-            <div className={`dropContainer  ${dropdown?'show':'hide'}`} onClick={(e)=>closeDropDown(e)}>
 
-            <div className={`dropdown ${dropdown?'show':'hide'}`} onClick={changeSort}>
+            {/* Sorting dropdown */}
+            <div  className="toggleSort">
+                <button className="dropdownBtn" onClick={()=>setDropDown(true)}>Sort by: {state.sortBy==='publishedAt'?`${state.order==='asc'?'Newest':'Oldest'}`:`${state.order==='asc'?'A-Z':'Z-A'}`}</button>
+                <div className={`dropContainer  ${dropdown?'show':'hide'}`} onClick={(e)=>closeDropDown(e)}>
 
-            <div id="recent" className={`dropItem ${state.sortBy==='publishedAt'&&state.order==='asc'?'select':''}`}>
-                    Most Recent
+                    <div className={`dropdown ${dropdown?'show':'hide'}`} onClick={changeSort}>
+
+                        <div id="recent" className={`dropItem ${state.sortBy==='publishedAt'&&state.order==='asc'?'select':''}`}>
+                            Most Recent
+                        </div>
+                        <div  id="oldest" className={`dropItem ${state.sortBy==='publishedAt'&&state.order==='desc'?'select':''}`}>
+                                Oldest First
+                        </div>
+                        <div  id="AZ" className={`dropItem ${state.sortBy==='title'&&state.order==='asc'?'select':''}`}>
+                                Title: A-Z
+                        </div>
+                        <div  id="ZA" className={`dropItem ${state.sortBy==='title'&&state.order==='desc'?'select':''}`}>
+                                Title: Z-A
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div  id="oldest" className={`dropItem ${state.sortBy==='publishedAt'&&state.order==='desc'?'select':''}`}>
-                    Oldest First
-            </div>
-            <div  id="AZ" className={`dropItem ${state.sortBy==='title'&&state.order==='asc'?'select':''}`}>
-                    Title: A-Z
-            </div>
-            <div  id="ZA" className={`dropItem ${state.sortBy==='title'&&state.order==='desc'?'select':''}`}>
-                    Title: Z-A
-            </div>
-            </div>
-            </div>
-        </div>
+
+            {/* Searchbar */}
             <div className="searchContainer">
                 <button className="clearSearch" onClick={()=>setSearchInput('')}>Clear</button>
                 <input className="search" type="text" placeholder="Search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
                 <button className="searchBtn" onClick={()=>setSearch(searchInput)}><img src="/search.png" alt="Search"></img></button>
             </div>
+
+            {/* Highlighted article */}
             {spotLight?
             <div  className="spotLightLink">
                 <Link to={`/article/${spotLight.publishedAt}`} >
-                <div className="spotLightCard">
-                {/* <p>{article.description.substring(0,50)}{article.description.length>100?'...':<></>}</p> */}
-                <div className="imageContainer">
-                    {spotLight.urlToImage?
-                    <img className="spotLightImg" src={spotLight.urlToImage} alt={spotLight.title}></img>
-                    :<></>} 
+                    <div className="spotLightCard">
+                        <div className="imageContainer">
+                            {spotLight.urlToImage?
+                            <img className="spotLightImg" src={spotLight.urlToImage} alt={spotLight.title}></img>
+                            :<></>} 
 
-                </div>
-                <div className="spotLightText">
-                    <h3>{spotLight.title}</h3>
-                    <p>{spotLight.description}</p>
-                </div>
-        </div>
+                        </div>
+                        <div className="spotLightText">
+                            <h3>{spotLight.title}</h3>
+                            <p>{spotLight.description}</p>
+                        </div>
+                    </div>
                 </Link>
             </div>
             :<></>}
-            {/* <button onClick={changeOrder}>{state.order}</button>
-            <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button> */}
+            
+            {/* All articles */}
             <div className="articleContainer">
-                {displayedArticles.map((article,index)=><div className="articleLink"><Link to={`/article/${article.publishedAt}`} key={index}><Card article={article} /></Link></div>)}
+                {displayedArticles.map((article,index)=>{
+                    return (
+                        <div className="articleLink">
+                            <Link to={`/article/${article.publishedAt}`} key={index}>
+                                <Card article={article} />
+                            </Link>
+                        </div>
+                    )})}
             </div>
+
+            {/* Page navigation buttons, back and next hidden at beginning and end respectively */}
             <div className="pageNav">
                 {state.page<=1?<div className="placeholder"></div>:
                 <button className="navigationBtn left" onClick={()=>changePage('back')}>&#60;</button>

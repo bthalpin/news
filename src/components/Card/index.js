@@ -1,14 +1,16 @@
 import './card.css';
-import {results} from '../../tempData';
 
 function Card({article}) {
     
+    // Small card with article displayed on homepage
     return (
         <div className="card">
-            {/* <p>{article.description.substring(0,50)}{article.description.length>100?'...':<></>}</p> */}
+
+            {/* loads image if url is provided from API */}
             {article.urlToImage?
-            <img className="cardImg" src={article.urlToImage} alt={article.title}></img>
+                <img className="cardImg" src={article.urlToImage} alt={article.title}></img>
             :<></>} 
+
             <div className="cardText">
                 <h3>{article.title}</h3>
                 <p>{article.description}</p>
