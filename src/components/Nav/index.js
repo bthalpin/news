@@ -31,7 +31,7 @@ function Nav() {
                 {window.location.pathname==='/'?<></>:
                 <div className={`back ${open?'collapse':''}`} onClick={()=>navigate(-1)}>Back</div>
                  }
-                <div className={`menu ${open?'collapse':'expand'}`}  onClick={e=>close(e)} ><img className="menuImage" src="./menu.png" alt="menu"></img></div>
+                <div className={`menu ${open?'collapse':'expand'}`}  onClick={e=>close(e)} ><img className="menuImage" src="/menu.png" alt="menu"></img></div>
                 <div className={open?'expand':'collapse'} >
                 {categories.map((category,index)=>{
                     return (
