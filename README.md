@@ -5,8 +5,6 @@ News is a React app that uses [NewsAPI.org](https://newsapi.org/docs/get-started
 
 ## Table of Contents
 
-[Links](#links)
-
 [Media](#media)
 
 [Installation](#installation)
@@ -14,11 +12,6 @@ News is a React app that uses [NewsAPI.org](https://newsapi.org/docs/get-started
 [Usage](#usage)
 
 [Questions](#questions)
-
-## Links
-[News App](https://bthalpin.github.io/news/)
-
-[NewsAPI.org](https://newsapi.org/docs/get-started)
 
 ## Media
 ![Main page](/public/main.png)

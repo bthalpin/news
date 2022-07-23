@@ -1,7 +1,7 @@
 .article{
     padding:1rem;
     width:100vw;
-    margin:1rem auto 3rem;
+    margin:1rem auto 5rem;
 }
 .articleTitle{
     text-align: start;
@@ -14,6 +14,10 @@
     justify-content: space-between;
     margin-bottom:2rem;
     font-size:0.9rem;
+}
+.source{
+    color:blue;
+    font-weight: 500;
 }
 @media screen and (min-width:1000px) {
     .article,.articleImg{

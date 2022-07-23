@@ -57,13 +57,15 @@ function Article() {
                     </div>
 
                     {!article.content?
-                        <a href={article?.url} target="_blank">{article?.source?.name}</a>
+                        <>
+                            <a href={article?.url} target="_blank">{article?.source?.name}</a>
+                            <p>{article.description}</p>
+                        </>
                     :<></>}
-
-                    <p>{article.description}</p>
+        
 
                     {article.content?
-                        <p>{article.content.split('…')[0]}... Continue reading at <a href={article?.url} target="_blank">{article?.source?.name}</a></p>
+                        <p>{article.content.split('…')[0]}... Continue reading at <a className="source" href={article?.url} target="_blank">{article?.source?.name}</a></p>
                     :<></>}
                 </>
             :<></>}
