@@ -40,7 +40,7 @@
         width:100%;
         padding:1rem;
         max-height:220px;
-        overflow: scroll;
+        overflow: hidden;
     }
     .cardImg{
         max-height:240px;

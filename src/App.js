@@ -6,9 +6,7 @@ import { StoreProvider } from './utils/GlobalState';
 import './App.css';
 
 function App() {
-  useEffect(()=>{
-    console.log('test')
-  },[])
+  
 
   return (
     <div className="App">

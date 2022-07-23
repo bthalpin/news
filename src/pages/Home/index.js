@@ -179,6 +179,8 @@ function Home() {
             type: ARTICLES,
             articles: data.articles
         })
+        console.log(data)
+        localStorage.setItem('news',JSON.stringify(data))
         setSearchInput('')
 
     }
@@ -186,7 +188,7 @@ function Home() {
         if (!state.topic){
             return
         }
-        // loadArticles()
+        loadArticles()
 
     },[state.topic])
     useEffect(()=>{
@@ -197,7 +199,7 @@ function Home() {
             type: CHANGE_TOPIC,
             topic: ''
         })
-        // loadArticles()
+        loadArticles()
         
     },[search])
 

@@ -13,7 +13,9 @@ function Article() {
         console.log(article)
     }
     const loadArticle = async () => {
-        const selectedArticle = await state.articles.filter(article=> article.publishedAt === time)[0]
+        const data = await localStorage.getItem('news');
+        const articles = await JSON.parse(data).articles
+        const selectedArticle = await articles.filter(article=> article.publishedAt === time)[0]
         setArticle(selectedArticle)
 
         console.log('here',selectedArticle,article,time,state)
