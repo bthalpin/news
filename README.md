@@ -16,7 +16,7 @@ News is a React app that uses [NewsAPI.org](https://newsapi.org/docs/get-started
 [Questions](#questions)
 
 ## Links
-[News App]()
+[News App](https://bthalpin.github.io/news/)
 
 [NewsAPI.org](https://newsapi.org/docs/get-started)
 
