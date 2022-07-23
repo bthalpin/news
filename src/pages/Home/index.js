@@ -161,7 +161,7 @@ function Home() {
         if (!state.topic){
             return
         }
-        // loadArticles()
+        loadArticles()
 
     },[state.topic])
 
@@ -176,7 +176,7 @@ function Home() {
             type: CHANGE_TOPIC,
             topic: ''
         })
-        // loadArticles()
+        loadArticles()
         
     },[search])
 

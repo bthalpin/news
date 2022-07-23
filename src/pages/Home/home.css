@@ -45,14 +45,11 @@
     width:1.3rem;
 }
 .searchBtn:hover{
-    /* background-color: var(--border); */
     box-shadow: 0 0 0.5rem var(--outline);
 }
 .toggleSort{
-    /* position: relative; */
     display:flex;
     justify-content: flex-end;
-    /* width:90vw; */
     margin: 1rem;
 }
 .dropdownBtn{
@@ -105,13 +102,8 @@
 .spotLightCard{
     margin-top:1rem;
     background-color: var(--spotlight);
-    /* padding:0.2rem; */
-    /* display:flex;
-    justify-content: center;
-    max-width: 95vw; */
 }
 .spotLightImg{
-    /* min-width: 90%; */
     max-width: 100%;
     max-height:400px;
 }
@@ -145,14 +137,7 @@
     background-color: var(--hover);
 }
 
-/* .left{
-    border-top-left-radius: 0.4rem;
-    border-bottom-left-radius: 0.4rem;
-}
-.right{
-    border-top-right-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
-} */
+
 @media screen and (min-width:500px) {
     .spotLightLink{
         width:min-content;

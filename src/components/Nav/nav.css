@@ -64,7 +64,12 @@
         padding:1rem 0;
         font-size: 0.85rem;
         position: relative;
+        text-align: center;
     }
+    .navLink:hover{
+        text-shadow: 0 0 0.2rem white;
+    }
+   
     .selected{
         background-color: var(--nav);
     }
@@ -79,9 +84,5 @@
         transform:translateX(-50%);
         width: 20px; 
         height: 10px;
-    
-        
     }
-
-    
 }

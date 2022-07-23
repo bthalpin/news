@@ -1,6 +1,5 @@
 import { createContext,useContext } from 'react';
 import { useNewsReducer } from './reducers';
-import { results } from '../tempData';
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -9,7 +8,7 @@ const StoreProvider = ({ value = [], ...props })=> {
 
     // Initial State
     const [state,dispatch] = useNewsReducer({
-        articles: [...results],
+        articles: [],
         order: 'asc',
         sortBy: 'publishedAt',
         page: 1,
