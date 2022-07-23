@@ -231,7 +231,7 @@ function Home() {
             <div className="searchContainer">
                 <button className="clearSearch" onClick={()=>setSearchInput('')}>Clear</button>
                 <input className="search" type="text" placeholder="Search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
-                <button className="searchBtn" onClick={()=>setSearch(searchInput)}><img src="./search.png" alt="Search"></img></button>
+                <button className="searchBtn" onClick={()=>setSearch(searchInput)}><img src="search.png" alt="Search"></img></button>
             </div>
 
             {/* Highlighted article */}

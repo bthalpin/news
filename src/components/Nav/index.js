@@ -45,7 +45,7 @@ function Nav() {
 
                 
                 <div className={`menu ${open?'collapse':'expand'}`}  onClick={e=>close(e)} >
-                    <img className="menuImage" src="./menu.png" alt="menu"></img>
+                    <img className="menuImage" src="menu.png" alt="menu"></img>
                 </div>
 
                 {/* Navigation links hidden when collapsed */}
