@@ -189,7 +189,7 @@ function Home() {
         if (!state.topic){
             return
         }
-        loadArticles()
+        // loadArticles()
 
     },[state.topic])
     useEffect(()=>{
@@ -200,7 +200,7 @@ function Home() {
             type: CHANGE_TOPIC,
             topic: ''
         })
-        loadArticles()
+        // loadArticles()
         
     },[search])
 

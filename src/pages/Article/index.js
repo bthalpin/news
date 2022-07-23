@@ -13,9 +13,17 @@ function Article() {
         console.log(article)
     }
     const loadArticle = async () => {
-        const data = await localStorage.getItem('news');
-        const articles = await JSON.parse(data).articles
-        const selectedArticle = await articles.filter(article=> article.publishedAt === time)[0]
+        let selectedArticle;
+        console.log(state.articles,state.articles.length)
+        if (!state.articles.length){
+            console.log('STORAGE')
+            const data = await localStorage.getItem('news');
+            const articles = await JSON.parse(data).articles
+            selectedArticle = await articles.filter(article=> article.publishedAt === time)[0]
+        } else {
+            console.log('STATE')
+            selectedArticle = await state.articles.filter(article=> article.publishedAt === time)[0]
+        }
         setArticle(selectedArticle)
 
         console.log('here',selectedArticle,article,time,state)
@@ -29,28 +37,31 @@ function Article() {
     return (
         
         <div className="article">
-          
+            {article?
+            <>
             <div>
 
-                <img className="articleImg" src={article?.urlToImage} alt={article?.title}></img>
+                <img className="articleImg" src={article.urlToImage} alt={article.title}></img>
             </div>
        
-            <h2 className="articleTitle">{article?.title}</h2>
+            <h2 className="articleTitle">{article.title}</h2>
             <div className="articleInfo">
-                {article?.author?
+                {article.author?
                 <p>by {article.author}</p>
                 :<p></p>}
-                {article?.publishedAt?
+                {article.publishedAt?
                 <p>{formatDate(article?.publishedAt)}</p>
                 :<p></p>}
 
             </div>
-            {!article?.content?
+            {!article.content?
             <a href={article?.url} target="_blank">{article?.source?.name}</a>
             :<></>}
-            <p>{article?.description}</p>
-            {article?.content?
+            <p>{article.description}</p>
+            {article.content?
             <p>{article.content.split('…')[0]}... Continue reading at <a href={article?.url} target="_blank">{article?.source?.name}</a></p>
+            :<></>}
+            </>
             :<></>}
             
         </div>
