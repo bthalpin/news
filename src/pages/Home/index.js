@@ -258,8 +258,8 @@ function Home() {
             <div className="articleContainer">
                 {displayedArticles.map((article,index)=>{
                     return (
-                        <div className="articleLink">
-                            <Link to={`/article/${article.publishedAt}`} key={index}>
+                        <div className="articleLink" key={index}>
+                            <Link to={`/article/${article.publishedAt}`}>
                                 <Card article={article} />
                             </Link>
                         </div>
