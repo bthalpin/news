@@ -166,6 +166,7 @@
         width:1200px;
         max-width: 95vw;
         border-radius: 1rem;
+        transition: all 0.1s ease-in-out;
     }
     .spotLightText{
         width:50%;
@@ -188,6 +189,10 @@
         width:95vw;
         max-width:1300px;
         border-radius: 0.5rem;
+        transition: all 0.1s ease-in-out;
+    }
+    .spotLightCard:hover,.articleLink:hover{
+        transform: scale(1.01);
     }
     .toggleSort{
         position: relative;
