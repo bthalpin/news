@@ -33,13 +33,16 @@ function Article() {
                 <img className="articleImg" src={article?.urlToImage} alt={article?.title}></img>
             </div>
        
-            <h2>{article?.title}</h2>
-            {article?.author?
-            <p>Author: {article.author}</p>
-            :<></>}
-            {article?.publishedAt?
-            <p>{formatDate(article?.publishedAt)}</p>
-            :<></>}
+            <h2 className="articleTitle">{article?.title}</h2>
+            <div className="articleInfo">
+                {article?.author?
+                <p>by {article.author}</p>
+                :<p></p>}
+                {article?.publishedAt?
+                <p>{formatDate(article?.publishedAt)}</p>
+                :<p></p>}
+
+            </div>
             {!article?.content?
             <a href={article?.url} target="_blank">{article?.source?.name}</a>
             :<></>}

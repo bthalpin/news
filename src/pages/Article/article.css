@@ -2,6 +2,15 @@
     padding:1rem;
     width:100vw;
 }
+.articleTitle{
+    text-align: start;
+}
 .articleImg{
     max-width: calc(100vw - 2rem);
+}
+.articleInfo{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:2rem;
+    margin-right:3rem;
 }
