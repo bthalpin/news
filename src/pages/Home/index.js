@@ -163,7 +163,8 @@ function Home() {
         }
         let results;
         if (search&&searchInput){
-            results = await fetch(`https://newsapi.org/v2/everything?language=en&apiKey=${process.env.REACT_APP_NEWS_API}&q=${search}`)
+            const formattedSearch = search.replace(/[^a-zA-Z0-9 ]/g,'').trim()
+            results = await fetch(`https://newsapi.org/v2/everything?language=en&apiKey=${process.env.REACT_APP_NEWS_API}&q=${formattedSearch}`)
             setSearch('')
             setSearched(true)
         } else {
@@ -188,7 +189,7 @@ function Home() {
         if (!state.topic){
             return
         }
-        // loadArticles()
+        loadArticles()
 
     },[state.topic])
     useEffect(()=>{
@@ -199,7 +200,7 @@ function Home() {
             type: CHANGE_TOPIC,
             topic: ''
         })
-        // loadArticles()
+        loadArticles()
         
     },[search])
 
@@ -247,6 +248,7 @@ function Home() {
                 <input className="search" type="text" placeholder="Search" value={searchInput} onChange={(e)=>setSearchInput(e.target.value)}></input>
                 <button className="searchBtn" onClick={()=>setSearch(searchInput)}><img src="/search.png" alt="Search"></img></button>
             </div>
+            {spotLight?
             <div  className="spotLightLink">
                 <Link to={`/article/${spotLight.publishedAt}`} >
                 <div className="spotLightCard">
@@ -264,6 +266,7 @@ function Home() {
         </div>
                 </Link>
             </div>
+            :<></>}
             {/* <button onClick={changeOrder}>{state.order}</button>
             <button onClick={changeSortBy}>{state.sortBy==='publishedAt'?'Date':'Title'}</button> */}
             <div className="articleContainer">
