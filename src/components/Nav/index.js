@@ -15,6 +15,9 @@ function Nav() {
             type: CHANGE_TOPIC,
             topic: category
         })
+        if (navigate.pathname !== '/') {
+            navigate('/')
+        }
     }
     const close = (e) => {
         e.stopPropagation()

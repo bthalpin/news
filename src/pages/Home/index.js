@@ -188,7 +188,7 @@ function Home() {
         if (!state.topic){
             return
         }
-        loadArticles()
+        // loadArticles()
 
     },[state.topic])
     useEffect(()=>{
@@ -199,7 +199,7 @@ function Home() {
             type: CHANGE_TOPIC,
             topic: ''
         })
-        loadArticles()
+        // loadArticles()
         
     },[search])
 
@@ -222,7 +222,7 @@ function Home() {
     return (
         <div className="home">
         <div  className="toggleSort">
-            <button className="dropdownBtn" onClick={()=>setDropDown(true)}>Sort by: {state.sortBy==='publishedAt'?`Date - ${state.order==='asc'?'Newest':'Oldest'}`:`Title - ${state.order==='asc'?'a-z':'z-a'}`}</button>
+            <button className="dropdownBtn" onClick={()=>setDropDown(true)}>Sort by: {state.sortBy==='publishedAt'?`${state.order==='asc'?'Newest':'Oldest'}`:`${state.order==='asc'?'A-Z':'Z-A'}`}</button>
             <div className={`dropContainer  ${dropdown?'show':'hide'}`} onClick={(e)=>closeDropDown(e)}>
 
             <div className={`dropdown ${dropdown?'show':'hide'}`} onClick={changeSort}>
