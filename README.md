@@ -24,7 +24,7 @@ To install the necessary dependencies, run the following command:
     npm install
 
 ## Usage
-To run locally you need to create a .env in your root directory and make a variable REACT_APP_NEWS_API that stores yours API Key.
+To run locally you need to create a .env in your root directory and make a variable REACT_APP_NEWS_API that stores your API Key.
 
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at <brian.t.halpin@gmail.com>. You can find more
